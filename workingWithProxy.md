@@ -14,14 +14,16 @@ lastupdated: "2016-07-20"
 # Working with a proxy
 {: #working_with_proxy}
 
+
+
 In some environments such as [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) and
 [Bluemix Local](/docs/local/index.html#local) a proxy may be configured which effects the
 behavior of your application during staging and runtime.
 
 You can configure your application to work with the proxy using the following environment variables:
-  * [http_proxy ![External link icon](../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html){: new_window}
-  * [https_proxy ![External link icon](../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html){: new_window}
-  * [no_proxy ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.gnu.org/software/wget/manual/html_node/Proxies.html){: new_window}
+  * [http_proxy](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html)
+  * [https_proxy](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html)
+  * [no_proxy](http://www.gnu.org/software/wget/manual/html_node/Proxies.html)
 
 You can set these environment variables using *cf se* or via the *manifest.yml* file.  If your application requires
 resources to be downloaded from the internet during staging and a proxy environment variable is set,  then depending
@@ -43,7 +45,7 @@ For [Liberty for Java](/docs/runtimes/liberty/index.html) and the [java_buildpac
 ```
 {: codeblock}
 
-and restage your application.  Your application will then use the specified proxy settings at runtime. See [Java Networking and Proxies ![External link icon](../icons/launch-glyph.svg "External link icon")](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxies.html){: new_window} for more information about the Java proxy options.
+and restage your application.  Your application will then use the specified proxy settings at runtime. See [Java Networking and Proxies](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxies.html) for more information about the Java proxy options.
 
 # rellinks
 {: #rellinks notoc}

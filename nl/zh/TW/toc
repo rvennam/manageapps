@@ -2,16 +2,16 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="bluemix-manage-apps" audience="platform" href="/docs/manageapps/mngapps.html"}
-Managing apps
+管理應用程式
 
 	{: .navgroup id="learn"}
 	mngapps.md
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
-	[Adding a service to your app](../services/reqnsi.html#add_service)
+	[將服務新增至您的應用程式](../services/reqnsi.html#add_service)
 	depapps.md
-	[Creating a deploy to Bluemix button](../develop/deploy_button.html)
+	[建立部署至 Bluemix 按鈕](../develop/deploy_button.html)
 	updapps.md
 	secapps.md
 	{: .navgroup-end}

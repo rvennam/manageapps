@@ -19,7 +19,7 @@ lastupdated: "2017-04-25"
 You can use the cf push command or {{site.data.keyword.Bluemix}} DevOps Services to update the applications in {{site.data.keyword.Bluemix_notm}}. In many cases, even for the built-in buildpacks such as Node.js, you must also supply a -c parameter to specify which command is used to start your application.
 {:shortdesc}
 
-##Creating and using a custom domain
+## Creating and using a custom domain
 {: #domain}
 
 For CF apps and container groups, you can use a custom domain in the URL of your application instead of the default {{site.data.keyword.Bluemix_notm}} system domain that is mybluemix.net.
@@ -68,12 +68,10 @@ You can create and use a custom domain in {{site.data.keyword.Bluemix_notm}} by 
     ```
     cf map-route myapp mydomain -n host_name
     ```
-
     For container groups, type the following command:
      ```
      cf ic route map -n host_name -d mydomain mycontainergroup
      ```
-
     *myapp*
 
     	For CF apps, the name of your application.
@@ -90,14 +88,16 @@ You can create and use a custom domain in {{site.data.keyword.Bluemix_notm}} by 
 
         For container groups, the name of the container group.
 
+
 After you configure the custom domain in {{site.data.keyword.Bluemix_notm}}, you must map the custom domain to the {{site.data.keyword.Bluemix_notm}} system domain on your registered DNS server:
 
-  1. Set up a 'CNAME' record for the custom domain name on your DNS server. Steps for setting up the CNAME record vary depending on your DNS provider. For example, if you are using GoDaddy, you follow the [Domains Help ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} guidance from GoDaddy.
+  1. Set up a 'CNAME' record for the custom domain name on your DNS server. Steps for setting up the CNAME record vary depending on your DNS provider. For example, if you are using GoDaddy, you follow the [Domains Help ![External link icon](../icons/launch-glyph.svg)](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} guidance from GoDaddy.
   2. Map the custom domain name to the secure endpoint for the {{site.data.keyword.Bluemix_notm}} region where your application is running. Use the following region endpoints to provide the URL route that is allocated to your organization in {{site.data.keyword.Bluemix_notm}}:
 
     * US-SOUTH: `secure.us-south.bluemix.net`
     * EU-GB: `secure.eu-gb.bluemix.net`
     * AU-SYD: `secure.au-syd.bluemix.net`
+    * EU-DE: `secure.eu-de.bluemix.net`
 
 In a browser or command line interface, enter the following URL to access the myapp application:
 
@@ -126,7 +126,7 @@ cf delete-route domain -n hostname -f
 
 If you have already deployed an application to {{site.data.keyword.Bluemix_notm}} and you want to update the application to a new version, you can use either of the following two approaches to assure blue-green deployment.
 
-###Example: Using the cf rename command
+### Example: Using the cf rename command
 
 In this example, the name of the application is Blue. The example demonstrates how to update the version of *Blue* using the **cf rename** command without disrupting traffic to the application. Optionally the now old version of *Blue* can be deleted when the updated version is in place.
 
@@ -192,7 +192,7 @@ In this example, the name of the application is Blue. The example demonstrates h
 
   **Result:** The *Blue* app is responding to URL `Blue.mybluemix.net`.
 
-###Example: Using the cf map-route command
+### Example: Using the cf map-route command
 
 In this example, *Blue* is the previously deployed application and *Green* is the updated version. This example demonstrates how to update the version of *Blue* using the **cf map-route** command without disrupting traffic to the application. Optionally the now old version of *Blue* can be deleted when the updated version is in place.
 
@@ -296,5 +296,5 @@ In this example, *Blue* is the previously deployed application and *Green* is th
 ## Related Links
 {: #general}
 
-* [Blue-green deployments ![External link icon](../icons/launch-glyph.svg "External link icon")](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
-* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![External link icon](../icons/launch-glyph.svg "External link icon")](https://hub.jazz.net/){:new_window}
+* [Blue-green deployments ![External link icon](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![External link icon](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}

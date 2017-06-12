@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-17"
+lastupdated: "2017-04-18"
 
 ---
 
@@ -30,7 +30,7 @@ For the CSR to be valid, the following information must be entered when generati
 
 **Country name**
 
-  A two-digit code that represents the country or region. For example, "US" represents the United States. For other countries or regions, check the [list of ISO country codes ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.iso.org/obp/ui/#search){:new_window} before you create the CSR.
+  A two-digit code that represents the country or region. For example, "US" represents the United States. For other countries or regions, check the [list of ISO country codes ![External link icon](../icons/launch-glyph.svg)](https://www.iso.org/obp/ui/#search){:new_window} before you create the CSR.
 
 **State or Province**
 
@@ -52,7 +52,7 @@ For the CSR to be valid, the following information must be entered when generati
 
   The fully qualified domain name (FQDN) for which you are requesting the SSL certificate.
 
-The methods for creating a CSR vary depending on your operating system. The following example shows how to create a CSR by using [the OpenSSL command line tool ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.openssl.org/){:new_window}:
+The methods for creating a CSR vary depending on your operating system. The following example shows how to create a CSR by using [the OpenSSL command line tool ![External link icon](../icons/launch-glyph.svg)](http://www.openssl.org/){:new_window}:
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
@@ -63,7 +63,7 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 
 A certificate is issued by a certificate authority and is digitally signed by that authority. After you create the CSR, you can generate your SSL certificate on a public certificate authority.
 
-## Uploading SSL certificates
+##Uploading SSL certificates
 {: #ssl_certificate}
 
 You can apply a security protocol to provide communication privacy for your application to prevent eavesdropping, tampering, and message forgery.
@@ -72,12 +72,12 @@ For every organization in {{site.data.keyword.Bluemix_notm}} with an account own
 
 Before you can upload certificates, you must create a certificate signing request. See [Creating certificate signing requests](#ssl_csr).
 
-When you use a custom domain, to serve the SSL certificate, use the following region endpoints to provide the URL route that is allocated to your organization in {{site.data.keyword.Bluemix_notm}}:
+When you use a custom domain, to serve the SSL certificate, use the following region endpoints to provide the URL route that is allocated to your organization in Bluemix:
 
   * US-South: secure.us-south.bluemix.net
-  * EU-DE: secure.eu-de.bluemix.net
   * EU-GB: secure.eu-gb.bluemix.net
   * AU-SYD: secure.au-syd.bluemix.net
+  * EU-DE: secure.eu-de.bluemix.net
 
 
 To upload a certificate for your application:
@@ -96,13 +96,13 @@ To upload a certificate for your application:
 
     A digital document that binds a public key to the identity of the certificate owner, thereby enabling the certificate owner to be authenticated. A certificate is issued by a certificate authority and is digitally signed by that authority.
 
-	A certificate is generally issued and signed by a certificate authority. However, for testing and development purposes you might use a self-signed certificate.
+    A certificate is generally issued and signed by a certificate authority. However, for testing and development purposes you might use a self-signed certificate.
 
     The following types of certificates are supported in {{site.data.keyword.Bluemix_notm}}:
 
-      * PEM (pem, .crt, .cer, and .cert)
-	  * DER (.der or .cer )
-      * PKCS #7 (p7b, p7r, spc)
+	* PEM (pem, .crt, .cer, and .cert)
+	* DER (.der or .cer )
+	* PKCS #7 (p7b, p7r, spc)
 
   **Private key**
 
@@ -125,7 +125,7 @@ To upload a certificate for your application:
 
     If you enable this option, a user who tries to access an SSL protected domain is requested to provide a client-side certificate. For example, in a web browser, when a user tries to access an SSL protected domain, the web browser prompts the user to provide a client certificate for the domain. Use the **Client certificate trust store** file upload option to define the client-side certificates that you allow to access your custom domain.
 
-  **Note:** The custom certificate feature in {{site.data.keyword.Bluemix_notm}} domain management depends on the Server Name Indication (SNI) extension of the Transport Layer Security (TLS) protocol. Therefore, the client code that accesses {{site.data.keyword.Bluemix_notm}} applications protected by custom certificates must support the SNI extension in the TLS implementation. For more information, see [section 7.4.2 of RFC 4346 ![External link icon](../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}.
+  **Note:** The custom certificate feature in {{site.data.keyword.Bluemix_notm}} domain management depends on the Server Name Indication (SNI) extension of the Transport Layer Security (TLS) protocol. Therefore, the client code that accesses {{site.data.keyword.Bluemix_notm}} applications protected by custom certificates must support the SNI extension in the TLS implementation. For more information, see [section 7.4.2 of RFC 4346 ![External link icon](../icons/launch-glyph.svg)](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}.
 
   **Client certificate trust store**
 

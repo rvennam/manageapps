@@ -12,9 +12,9 @@ lastupdated: "2016-03-17"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Developing apps
+# 开发应用程序
 {: #developingapps}
 
 
-You can develop applications by using an integrated development environment (IDE) or a text editor, or you can use {{site.data.keyword.Bluemix}} DevOps Services.
+您可以使用集成开发环境 (IDE) 或文本编辑器来开发应用程序，也可以使用 {{site.data.keyword.Bluemix}} DevOps Services 来开发应用程序。
 {:shortdesc}

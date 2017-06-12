@@ -22,7 +22,7 @@ You can deploy applications to {{site.data.keyword.Bluemix}} by using various me
 
 Deploying an application to {{site.data.keyword.Bluemix_notm}} includes two phases, staging the application and starting the application.
 
-Cloud Foundry supports Diego, which is the new default runtime architecture that provides a set of capabilities that enhances the application development experience for hosting and constructing cloud platforms. This architecture update provides an improvement in the overall operation and performance of the Cloud Foundry platform. The new architecture provides support for several application container technologies, including Garden and Windows, an SSH package that allows direct login to the application container, and other innovative changes. For more information about the recent architecture upgrade, see [{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window}.
+Cloud Foundry supports Diego, which is the new default runtime architecture that provides a set of capabilities that enhances the application development experience for hosting and constructing cloud platforms. This architecture update provides an improvement in the overall operation and performance of the Cloud Foundry platform. The new architecture provides support for several application container technologies, including Garden and Windows, an SSH package that allows direct login to the application container, and other innovative changes. For more information about the recent architecture upgrade, see [{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live ![External link icon](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window}.
 
 
 All new applications that you create will run on Diego, and you must migrate your existing applications that run on DEAs to the new Diego architecture.
@@ -57,14 +57,14 @@ As your application is updated from DEA architecture to Diego, you might experie
 
 Complete the following steps to migrate your app to Diego:
 
- 1.  Install both the [cf CLI ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli/releases){: new_window} and the [Diego-Enabler CLI Plugin ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}.
+ 1.  Install both the [cf CLI ![External link icon](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} and the [Diego-Enabler CLI Plugin ![External link icon](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}.
  2. Review the [known issues list](depapps.html#knownissues).
  3. Set the Diego flag to change your app to running on Diego:
   ```
   $ cf enable-diego APPLICATION_NAME
   ```
 
-After you update your app, verify that your app started and is working as expected. If you cannot access your app right away, you might need to try again later. If your migrated app fails to start, it will remain offline until you identify and resolve the issue, and then restart the app.
+After you update your app, verify that your app started. If your migrated app fails to start, it will remain offline until you identify and resolve the issue, and then restart the app.
 
 IBM will alert you of the upcoming mandatory migration period when DEA architecture support will be removed, and if you have not migrated your apps, the operations team will migrate all apps for you.
 
@@ -83,11 +83,11 @@ There are the following known issues that you might need to address when migrati
   * The **cf files** command is no longer supported. The replacement is the **cf ssh** command. For more details on the **cf ssh** command, see [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
   * Some apps might use a high number of file descriptors (inodes). If you encounter this issue, you must increase disk quota for your app with the `cf scale APP_NAME [-k DISK]` command.
 
-For the comprehensive list of known issues, see the Cloud Foundry documentation page for [Migrating to Diego ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/diego-design-notes/blob/master/migrating-to-diego.md){: new_window}.
+For the comprehensive list of known issues, see the Cloud Foundry documentation page for [Migrating to Diego ![External link icon](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/diego-design-notes/blob/master/migrating-to-diego.md){: new_window}.
 
-Until support for the older DEA architecture is removed, you can run the following command to transition back to DEAs: `cf disable-diego APPLICATION_NAME`. You can also still deploy apps to the DEA architecture until support is removed.
+Until support for the older DEA architecture is removed, you can run the following command to transition back to DEAs: `cf disable-diego APPLICATION_NAME`. You can also still deploy new apps to the DEA architecture until support is removed:
 
-**Note**: You must have both the [cf CLI ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli/releases){: new_window} and the [Diego-Enabler CLI Plugin ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window} installed to use the `disable-diego` command.
+**Note**: You must have both the [cf CLI ![External link icon](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} and the [Diego-Enabler CLI Plugin ![External link icon](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window} installed to use the `disable-diego` command.
 
 1. Deploy the application without starting it:
 ```
@@ -111,11 +111,12 @@ When an application is started, the instance or instances of the application con
 
 If the application fails to start, the application is stopped and the entire contents of your application container are removed. Therefore, if an application stops or if the staging process of an application fails, log files will not be available for you to use.
 
-If the logs for your application are no longer available so that the **cf ssh**, **cf scp**, or **cf files** commands can no longer be used to see the cause of the staging errors inside the application container, you can use the **cf logs** command instead. The **cf logs** command uses the Cloud Foundry log aggregator to collect the details of your application logs and system logs, and you can see what was buffered within the log aggregator. For more information about the log aggregator, see [Logging in Cloud Foundry ![External link icon](../icons/launch-glyph.svg "External link icon")](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}.
+If the logs for your application are no longer available so that the **cf ssh**, **cf scp**, or **cf files** commands can no longer be used to see the cause of the staging errors inside the application container, you can use the **cf logs** command instead. The **cf logs** command uses the Cloud Foundry log aggregator to collect the details of your application logs and system logs, and you can see what was buffered within the log aggregator. For more information about the log aggregator, see [Logging in Cloud Foundry ![External link icon](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}.
 
 **Note:** The buffer size is limited. If an application runs for a long time and is not restarted, logs might not be displayed when you enter the `cf logs appname --recent` command because the log buffer might have been cleared. Therefore, to debug staging errors for a large application, you can enter the `cf logs appname` command in a separate command line from the cf command line interface to track the logs when you deploy the application.
 
 If you experience problems when you stage your applications on {{site.data.keyword.Bluemix_notm}}, you can follow the steps in [Debugging staging errors](/docs/debug/index.html#debugging-staging-errors) to resolve the problem.
+
 
 ## Deploying applications by using the cf command
 {: #dep_apps}
@@ -178,7 +179,7 @@ A `package.json` file must be in your Node.js application for the application to
   }
   ```
 
-  For more information about the `package.json` file, see [package.json](https://www.npmjs.org/doc/files/package.json.html){:new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+  For more information about the `package.json` file, see [package.json ![External link icon](../icons/launch-glyph.svg)](https://www.npmjs.org/doc/files/package.json.html){:new_window}.
 
   * To deploy PHP, Ruby, or Python applications to {{site.data.keyword.Bluemix_notm}}, use the following command from the directory that contains your application source:
 
@@ -263,13 +264,11 @@ The following example shows a manifest file for a Node.js application that uses 
 ## Environment variables
 {: #app_env}
 
-<!-- Need to get review of this section as some env variables are no longer supported for Diego -->
-
-Environment variables contain the environment information of a deployed application on {{site.data.keyword.Bluemix_notm}}. Besides environment variables set by *Diego* and buildpacks, you can also set application-specific environment variables for applications on {{site.data.keyword.Bluemix_notm}}.
+Environment variables contain the environment information of a deployed application on {{site.data.keyword.Bluemix_notm}}. Besides environment variables set by a *Diego* and buildpacks, you can also set application-specific environment variables for applications on {{site.data.keyword.Bluemix_notm}}.
 
 You can view the following environment variables of a running {{site.data.keyword.Bluemix_notm}} application by using the **cf env** command or from the {{site.data.keyword.Bluemix_notm}} user interface:
 
-  * User-defined variables that are specific for an application. For information about how to add a user-defined variable to an app, see [Adding user-defined environment variables](#ud_env).
+  * User-defined variables that are specific for an application. For information about how to add a user-defined variable to an app, see [Adding user-defined environment variables ![External link icon](../icons/launch-glyph.svg)](#ud_env){:new_window}.
 
   * The VCAP_SERVICES variable, which contains connection information to access a service instance. If your application is bound to multiple services, the VCAP_SERVICES variable includes the connection information for each service instance. For example:
 
@@ -319,7 +318,7 @@ You can view the following environment variables of a running {{site.data.keywor
   }
   ```
 
-You also have access to the environment variables that are set by Diego and the buildpacks.
+You also have access to the environment variables that are set by the DEA and buildpacks.
 
 The following variables are defined by Diego:
 
@@ -350,14 +349,14 @@ The following variables are defined by Diego:
     "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "application_name": "testapp",
     "application_uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
+        "testapp.AppDomainName.mybluemix.net"
     ],
     "version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "name": "testapp",
     "space_name": "dev",
     "space_id": "c6ed3a8e-436b-43ac-9f96-b676ee335000",
     "uris": [
-        "testapp.AppDomainNamestage1.mybluemix.net"
+        "testapp.AppDomainName.mybluemix.net"
     ],
     "users": null,
     "application_id": "e984bb73-4c4e-414b-84b7-c28c87f84003",
@@ -403,7 +402,7 @@ The following variables are defined by Diego:
 
 </dl>
 
-Variables that are defined by buildpacks are different for each buildpack. See [Buildpacks ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window} for any other compatible buildpacks.
+Variables that are defined by buildpacks are different for each buildpack. See [Buildpacks ![External link icon](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window} for any other compatible buildpacks.
 
 <ul>
     <li>The following variables are defined by the Liberty Buildpack:
@@ -443,7 +442,7 @@ if (process.env.VCAP_SERVICES) {
 }
 ```
 
-For more information about each environment variable, see [Cloud Foundry Environment Variables ![External link icon](../icons/launch-glyph.svg "External link icon")](http://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html){:new_window}.
+For more information about each environment variable, see [Cloud Foundry Environment Variables ![External link icon](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html){:new_window}.
 
 ## Customizing application deployments
 {: #customize_dep}
@@ -526,7 +525,7 @@ tmp/
 ## Related Links
 {: #general}
 
-* [Deploying with Application Manifests ![External link icon](../icons/launch-glyph.svg "External link icon")](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
-* [CF Manifest Generator ![External link icon](../icons/launch-glyph.svg "External link icon")](http://cfmanigen.mybluemix.net/){:new_window}
-* [Getting Started with cf v6 ![External link icon](../icons/launch-glyph.svg "External link icon")](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}
+* [Deploying with Application Manifests ![External link icon](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
+* [CF Manifest Generator ![External link icon](../icons/launch-glyph.svg)](http://cfmanigen.mybluemix.net/){:new_window}
+* [Getting Started with cf v6 ![External link icon](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}
 * [Getting Started with IBM Continuous Delivery Pipeline for Bluemix](/docs/services/DeliveryPipeline/index.html#getstartwithCD)
