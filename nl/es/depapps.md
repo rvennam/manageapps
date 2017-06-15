@@ -53,7 +53,7 @@ Para ver más detalles sobre el mandato **cf push**, consulte [cf push](/docs/cl
 
 Diego es la arquitectura predeterminada de Cloud Foundry para {{site.data.keyword.Bluemix_notm}} y se retirará el soporte para DEA, de modo que debe migrar todas sus aplicaciones existentes actualizando cada app. Comience la migración de sus apps a Diego actualizando la aplicación con el distintivo Diego. La aplicación intentará inmediatamente ejecutarse en Diego y dejará de ejecutarse en los DEA.
 
-A medida que la aplicación se actualiza desde la arquitectura DEA a Diego, es posible que se produzca un breve intervalo de inactividad, o quizás un intervalo de inactividad prolongado, si la aplicación no es compatible con Diego. Para limitar este intervalo de inactividad, realice un [despliegue de tipo blue-green](/docs/manageapps/updapps.html#blue_green) desplegando una copia de la aplicación en Diego y luego intercambiando rutas y escalando hacia abajo la aplicación DEA.
+A medida que la aplicación se actualiza desde la arquitectura DEA a Diego, es posible que se produzca un breve intervalo de inactividad, o quizás un intervalo de inactividad prolongado, si la aplicación no es compatible con Diego. Para limitar este intervalo de inactividad, realice un [despliegue azul-verde](/docs/manageapps/updapps.html#blue_green) desplegando una copia de la aplicación en Diego y luego intercambiando rutas y escalando hacia abajo la aplicación DEA.
 
 Siga estos pasos para migrar su app a Diego:
 

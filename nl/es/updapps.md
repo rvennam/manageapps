@@ -115,18 +115,18 @@ cf delete-route dominio -n hostname -f
 *dominio* es el nombre del dominio y *nombre_host* es el nombre de host de la ruta de la aplicación. Para obtener más información sobre el mandato **cf delete-route**, escriba `cf
 delete-route -h`.
 
-##Despliegues Blue-Green
+##Despliegues azul-verde
 {: #blue_green}
 
-{{site.data.keyword.Bluemix_notm}} da soporte a la técnica de despliegue Blue-Green para habilitar la entrega continua y para minimizar los sucesos de tiempo de inactividad.
+{{site.data.keyword.Bluemix_notm}} da soporte a la técnica de despliegue azul-verde para habilitar la entrega continua y para minimizar los sucesos de tiempo de inactividad.
 
-El *despliegue Blue-Green* es una técnica de despliegue con tiempo de inactividad cero que consiste en dos entornos de producción prácticamente idénticos llamados Blue y Green. Difieren en los artefactos que el desarrollador ha modificado intencionadamente, generalmente en la versión de la aplicación. En cada momento al menos uno de los entornos está activo. Con la técnica de despliegue Blue-Green se puede beneficiar de las siguientes ventajas:
+El *despliegue azul-verde* es una técnica de despliegue con tiempo de inactividad cero que consiste en dos entornos de producción prácticamente idénticos llamados Azul y Verde. Difieren en los artefactos que el desarrollador ha modificado intencionadamente, generalmente en la versión de la aplicación. En cada momento al menos uno de los entornos está activo. Con la técnica de despliegue azul-verde se puede beneficiar de las siguientes ventajas:
 
 * Desarrollo rápido de software, desde la fase final de prueba hasta la fase de producción.
 * Despliegue de una nueva versión de una aplicación sin interrumpir el tráfico destinado a la aplicación.
 * Retrotracción rápida. Si hay algo que no funciona en uno de los entornos, que pueda conmutar rápidamente al otro entorno.
 
-Si ya ha desplegado una aplicación en {{site.data.keyword.Bluemix_notm}} y desea actualizar la aplicación a una nueva versión, puede utilizar cualquiera de los dos enfoques siguientes para garantizar un despliegue blue-green.
+Si ya ha desplegado una aplicación en {{site.data.keyword.Bluemix_notm}} y desea actualizar la aplicación a una nueva versión, puede utilizar cualquiera de los dos enfoques siguientes para garantizar un despliegue azul-verde.
 
 ### Ejemplo: Utilización del mandato cf rename
 
@@ -306,5 +306,5 @@ delete`.
 ## Enlaces relacionados
 {: #general}
 
-* [Despliegues blue-green ![icono de enlace externo](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+* [Despliegues azul-verde ![icono de enlace externo](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
 * [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![icono de enlace externo](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}
