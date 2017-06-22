@@ -34,7 +34,7 @@ Affinché il CSR sia valido, durante la sua creazione è necessario immettere le
 **Nome paese**
 
   Un codice a due cifre che rappresenta il paese o la regione. Ad esempio, "US" rappresenta gli Stati
-Uniti. Per gli altri paesi o regioni, consulta l'[elenco di codici paese ISO ![Icona link esterno](../icons/launch-glyph.svg)](https://www.iso.org/obp/ui/#search){:new_window} prima di creare il CSR.
+Uniti. Per gli altri paesi o regioni, vedi l'[elenco di codici paese ISO ![Icona link esterno](../icons/launch-glyph.svg)](https://www.iso.org/obp/ui/#search){:new_window} prima di creare il CSR.
 
 **Stato o provincia**
 

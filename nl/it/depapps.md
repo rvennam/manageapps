@@ -28,7 +28,7 @@ distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}}.
 La distribuzione di un'applicazione in {{site.data.keyword.Bluemix_notm}} include
 due fasi, la preparazione dell'applicazione e il suo avvio.
 
-Cloud Foundry supporta Diego, che è la nuova architettura di runtime predefinita che fornisce una serie di funzionalità che migliorano l'esperienza di sviluppo dell'applicazione per l'hosting e la messa a punto delle piattaforme cloud. Questo aggiornamento dell'architettura fornisce una miglioramento nelle prestazioni e operazioni generale della piattaforma Cloud Foundry. La nuova architettura fornisce supporto per diverse tecnologie del contenitore dell'applicazione, inclusi Garden e Windows, un pacchetto SSH che permette l'accesso diretto al contenitore dell'applicazione, e altre modifiche innovative. Per ulteriori informazioni sul recente aggiornamento dell'architettura, consulta [{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live ![Icona link esterno](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window}.
+Cloud Foundry supporta Diego, che è la nuova architettura di runtime predefinita che fornisce una serie di funzionalità che migliorano l'esperienza di sviluppo dell'applicazione per l'hosting e la messa a punto delle piattaforme cloud. Questo aggiornamento dell'architettura fornisce una miglioramento nelle prestazioni e operazioni generale della piattaforma Cloud Foundry. La nuova architettura fornisce supporto per diverse tecnologie del contenitore dell'applicazione, inclusi Garden e Windows, un pacchetto SSH che permette l'accesso diretto al contenitore dell'applicazione, e altre modifiche innovative. Per ulteriori informazioni sul recente aggiornamento dell'architettura, vedi [{{site.data.keyword.Bluemix_notm}} Cloud Foundry: Diego is live ![Icona link esterno](../icons/launch-glyph.svg)](https://www.ibm.com/blogs/bluemix/2017/01/bluemix-cloud-foundry-diego-live/){: new_window}.
 
 
 Tutte le nuove applicazioni che crei saranno eseguite su Diego e devi migrare le tue applicazioni esistenti in esecuzione sui DEA alla nuova architettura Diego.
@@ -52,7 +52,7 @@ Tutte le nuove applicazioni vengono distribuite all'architettura Diego. Per prep
   $ cf push APPLICATION_NAME
   ```
 
-Per ulteriori dettagli sul comando **cf push**, consulta [cf push](/docs/cli/reference/cfcommands/index.html#cf_push).
+Per ulteriori dettagli sul comando **cf push**, vedi [cf push](/docs/cli/reference/cfcommands/index.html#cf_push).
 
 ### Migrazione di un'applicazione esistente a Diego
 {: #migrateapp}
@@ -86,10 +86,10 @@ Per convalidare su quale backend l'applicazione è in esecuzione, utilizzare il 
 I seguenti sono i problemi noti che potresti dover risolvere durante la migrazione delle tue applicazioni a Diego:
 
   * Le applicazioni di lavoro distribuite con l'opzione `--no-route` non sono riportate come integre. Per evitare questo, disabilita il controllo di integrità basato sulla porta con il comando `cf set-health-check APP_NAME none`.
-  * Il comando **cf files** non è più supportato. Viene sostituito dal comando **cf ssh**. Per ulteriori dettagli sul comando **cf ssh**, consulta [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
+  * Il comando **cf files** non è più supportato. Viene sostituito dal comando **cf ssh**. Per ulteriori dettagli sul comando **cf ssh**, vedi [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
   * Alcune applicazioni potrebbero utilizzare un gran numero di descrittori file (inode). Se riscontri questo problema, devi aumentare la quota disco della tua applicazione con il comando `cf scale APP_NAME [-k DISK]`.
 
-Per l'elenco completo dei problemi noti, consulta la pagina della documentazione Cloud Foundry per [Migrating to Diego ![Icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/diego-design-notes/blob/master/migrating-to-diego.md){: new_window}.
+Per l'elenco completo dei problemi noti, vedi la pagina della documentazione Cloud Foundry per [Migrating to Diego ![Icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/diego-design-notes/blob/master/migrating-to-diego.md){: new_window}.
 
 Finché il supporto per la vecchia architettura DEA non viene rimosso, puoi eseguire il seguente comando per tornare ai DEA: `cf disable-diego APPLICATION_NAME`. Puoi inoltre ancora distribuire nuove applicazioni all'architettura DEA finché non viene rimosso il supporto:
 
@@ -214,7 +214,7 @@ Perché
   }
   ```
 
-  Per ulteriori informazioni sul file `package.json`, consulta [package.json ![Icona link esterno](../icons/launch-glyph.svg)](https://www.npmjs.org/doc/files/package.json.html){:new_window}.
+  Per ulteriori informazioni sul file `package.json`, vedi [package.json ![Icona link esterno](../icons/launch-glyph.svg)](https://www.npmjs.org/doc/files/package.json.html){:new_window}.
 
   * Per distribuire applicazioni PHP, Ruby o Python a {{site.data.keyword.Bluemix_notm}},
 utilizza il seguente comando dalla directory che contiene l'origine della tua applicazione:
