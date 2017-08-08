@@ -222,21 +222,21 @@ cf push -f appManifest.yml
 <p>  </p>
 
 
-|options	|説明	|使用法または例|
+|オプション	|説明	|使用法または例|
 |:----------|:--------------|:---------------|
-|**ビルドパック (buildpack)**	|カスタム・ビルドパックの URL または名前。	|`buildpack:` *buildpack_URL*|
-|**disk_quota**	|アプリケーションに割り振るディスク割り当て量。デフォルト値は 1 G です。	|`disk_quota: 500M`|
-|**ドメイン (domain)**	|{{site.data.keyword.Bluemix_notm}} 内のアプリケーションのドメイン・ネーム。	|`domain:` ng.bluemix.net|
-|**ホスト (host)**	|{{site.data.keyword.Bluemix_notm}} 内のアプリケーションのホスト名。この値は {{site.data.keyword.Bluemix_notm}} 環境で固有でなければなりません。	|`host:` *host_name*|
-|**name**	|{{site.data.keyword.Bluemix_notm}} 内のアプリケーション名。この値は {{site.data.keyword.Bluemix_notm}} 環境で固有でなければなりません。	|`name:` *appname*|
-|**path**	|アプリケーションのロケーション。この値は相対パスまたは絶対パスとすることができます。	|`path:` *path_to_application*|
-|**command**	|アプリケーションのカスタム開始コマンド、またはスクリプト・ファイルの実行コマンド。	|`command:` *custom_command* `command:` *bash ./run.sh*|
-|**memory**	|アプリケーションに割り振るメモリー量。デフォルト値は 1G です。	|`memory: 512M`|
-|**instances**	|アプリケーション用に作成するインスタンスの数。	|`instances: 2`|
-|**timeout**	|アプリケーションの開始に使用する最大時間 (秒)。デフォルト値は 60 秒です。	|`timeout: 80`|
-|**no-route**	|アプリケーションがバックグラウンドで実行されているだけであれば、そのアプリケーションに経路が割り当てられないようにするブール値。デフォルト値は **false** です。	|`no-route: true`|
-|**random-route**	|アプリケーションにランダムな経路を割り当てるブール値。デフォルト値は **false** です。	|`random-route: true`|
-|**services**	|アプリケーションにバインドするサービス。	|`services: - mysql_maptest`|
+|**buildpack**	|カスタム・ビルドパックの URL または名前。|`buildpack:` *buildpack_URL*|
+|**disk_quota**	|アプリケーションに割り振るディスク割り当て量。デフォルト値は 1 G です。|`disk_quota: 500M`|
+|**domain**	|{{site.data.keyword.Bluemix_notm}} 内のアプリケーションのドメイン・ネーム。|`domain:` ng.bluemix.net|
+|**host**	|{{site.data.keyword.Bluemix_notm}} 内のアプリケーションのホスト名。この値は {{site.data.keyword.Bluemix_notm}} 環境で固有でなければなりません。|`host:` *host_name*|
+|**name**	|{{site.data.keyword.Bluemix_notm}} 内のアプリケーション名。この値は {{site.data.keyword.Bluemix_notm}} 環境で固有でなければなりません。|`name:` *appname*|
+|**path**	|アプリケーションのロケーション。この値は相対パスまたは絶対パスとすることができます。|`path:` *path_to_application*|
+|**command**	|アプリケーションのカスタム開始コマンド、またはスクリプト・ファイルの実行コマンド。|`command:` *custom_command* `command:` *bash ./run.sh*|
+|**memory**	|アプリケーションに割り振るメモリー量。デフォルト値は 1G です。|`memory: 512M`|
+|**instances**	|アプリケーション用に作成するインスタンスの数。|`instances: 2`|
+|**timeout**	|アプリケーションの開始に使用する最大時間 (秒)。デフォルト値は 60 秒です。|`timeout: 80`|
+|**no-route**	|アプリケーションがバックグラウンドで実行されているだけであれば、そのアプリケーションに経路が割り当てられないようにするブール値。デフォルト値は **false** です。|`no-route: true`|
+|**random-route**	|アプリケーションにランダムな経路を割り当てるブール値。デフォルト値は **false** です。|`random-route: true`|
+|**services**	|アプリケーションにバインドするサービス。|`services: - mysql_maptest`|
 |**env**	|アプリケーションのカスタム環境変数。|`env: DEV_ENV: production`|
 {: caption="表 1. マニフェスト YAML ファイルでサポートされるオプション" caption-side="top"}
 

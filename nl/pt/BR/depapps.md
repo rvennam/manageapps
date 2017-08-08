@@ -270,11 +270,11 @@ cf push -f appManifest.yml
 <p>  </p>
 
 
-|Opções	|Descrição	|Uso ou exemplo|
+|Opções	|Descrição |Uso ou exemplo|
 |:----------|:--------------|:---------------|
 |**buildpack**	|A URL ou o nome do buildpack customizado.	|`buildpack: ` *buildpack_URL*|
 |**disk_quota**	|A cota do disco que é alocada para um aplicativo. O valor padrão é 1 G.	|`disk_quota: 500M`|
-|**domínio**	|O nome de domínio do aplicativo no {{site.data.keyword.Bluemix_notm}}.	|`domain:` ng.bluemix.net|
+|**domain**	|O nome de domínio do aplicativo no {{site.data.keyword.Bluemix_notm}}.	|`domain:` ng.bluemix.net|
 |**host**	|O nome do host do aplicativo no {{site.data.keyword.Bluemix_notm}}. Esse valor deve ser exclusivo no ambiente do {{site.data.keyword.Bluemix_notm}}.	|`host: ` *host_name*|
 |**name**	|O nome do aplicativo no {{site.data.keyword.Bluemix_notm}}. Esse valor deve ser exclusivo no ambiente do {{site.data.keyword.Bluemix_notm}}.	|`name: ` *appname*|
 |**path**	|O local do aplicativo. Esse valor pode ser um caminho relativo ou um caminho absoluto.	|`path: ` *path_to_application*|
@@ -284,7 +284,7 @@ cf push -f appManifest.yml
 |**timeout**	|O período máximo de tempo em segundos usado para iniciar o aplicativo. O valor padrão é 60 segundos.	|`timeout: 80`|
 |**no-route**	|Um valor booleano para evitar que uma rota seja designada ao aplicativo se ele estiver sendo executado apenas em segundo plano. O valor padrão é **false**.	|`no-route: true`|
 |**random-route**	|Um valor booleano para designar uma rota aleatória para o aplicativo. O valor padrão é **false**.	|`random-route: true`|
-|**Serviços**	|Os serviços a serem ligados ao aplicativo.	|`services:   - mysql_maptest`|
+|**services**	|Os serviços a serem ligados ao aplicativo.	|`services:   - mysql_maptest`|
 |**env**	|As variáveis de ambiente customizadas do aplicativo.|`env: DEV_ENV: production`|
 {: caption="Tabela 1. Opções suportadas no arquivo manifest YAML" caption-side="top"}
 
@@ -462,7 +462,7 @@ em que o aplicativo atingiu seu estado atual e assim por diante. Por exemplo:
 
 </dl>
 
-As variáveis que são definidas por buildpacks são diferentes para cada buildpack. Veja [Buildpacks ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window} para obter quaisquer outros buildpacks compatíveis.
+As variáveis que são definidas por buildpacks são diferentes para cada buildpack. Veja [Buildpacks ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-community/cf-docs-contrib/wiki/Buildpacks){:new_window} para quaisquer outros buildpacks compatíveis.
 
 <ul>
     <li>As variáveis a seguir são definidas pelo Buildpack do Liberty:
@@ -609,7 +609,7 @@ tmp/
 ## Links Relacionados
 {: #general}
 
-* [Implementando com Manifests do aplicativo ![Ícone de link externo](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
+* [Implementando com manifests do aplicativo ![Ícone de link externo](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
 * [Gerador de manifest do CF ![Ícone de link externo](../icons/launch-glyph.svg)](http://cfmanigen.mybluemix.net/){:new_window}
 * [Introdução ao cf v6 ![Ícone de link externo](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}
 * [Introdução ao IBM Continuous Delivery Pipeline for Bluemix](/docs/services/DeliveryPipeline/index.html#getstartwithCD)

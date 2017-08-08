@@ -231,7 +231,7 @@ cf push -f appManifest.yml
 |**disk_quota**	|La cuota de disco que se debe asignar a la app. El valor predeterminado es 1 G.	|`disk_quota: 500M`|
 |**domain**	|El nombre de dominio de la app en {{site.data.keyword.Bluemix_notm}}.	|`dominio:` ng.bluemix.net|
 |**host**	|El nombre de host de la app en {{site.data.keyword.Bluemix_notm}}. Este valor debe ser exclusivo en el entorno de {{site.data.keyword.Bluemix_notm}}.	|`host: ` *nombre_host*|
-|**nombre**	|El nombre de la app en {{site.data.keyword.Bluemix_notm}}. Este valor debe ser exclusivo en el entorno de {{site.data.keyword.Bluemix_notm}}.	|`name: ` *nombre_app*|
+|**name**	|El nombre de la app en {{site.data.keyword.Bluemix_notm}}. Este valor debe ser exclusivo en el entorno de {{site.data.keyword.Bluemix_notm}}.	|`name: ` *nombre_app*|
 |**path**	|La ubicación de la app. Este valor puede ser una vía de acceso relativa o absoluta.	|`path: ` *vía_acceso_a_app*|
 |**command**	|El mandato de inicio personalizado para la app o el mandato para ejecutar archivos script..	|`command:` *mandato_personalizado* `command:` *bash ./run.sh*|
 |**memory**	|La cantidad de memoria que se debe asignar a la app. El valor predeterminado es 1 G.	|`memory: 512M`|

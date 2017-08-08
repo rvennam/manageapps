@@ -46,7 +46,7 @@ Vous pouvez aussi utiliser `exemple.mon_entreprise.com` pour associer la route `
 
   2. Ajoutez la route avec le domaine personnalisé à une application.
 
-    1. Cliquez sur l'icône **Menu** ![Icône de menu](../icons/icon_hamburger.svg) &gt; **Tableau de bord**, puis cliquez sur la ligne de l'application à laquelle ajouter la route. La page **Vue d'ensemble** s'affiche.
+    1. Cliquez sur l'icône **Menu** ![Icône Menu](../icons/icon_hamburger.svg) &gt; **Tableau de bord**, puis sur la ligne de l'application à laquelle ajouter la route. La page **Vue d'ensemble** s'affiche.
 
 	2. Dans le menu **Routes**, sélectionnez **Editer les routes**.
 

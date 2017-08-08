@@ -222,22 +222,22 @@ cf push -f appManifest.yml
 <p>  </p>
 
 
-|选项	|描述	|用法或示例|
+|选项|描述|用法或示例|
 |:----------|:--------------|:---------------|
-|**buildpack**	|定制 buildpack 的 URL 或名称。	|`buildpack: ` *buildpack_URL*|
-|**disk_quota**	|为应用程序分配的磁盘配额。缺省值为 1G。	|`disk_quota: 500M`|
-|**domain**	|{{site.data.keyword.Bluemix_notm}} 中应用程序的域名。	|`domain:` ng.bluemix.net|
-|**host**	|{{site.data.keyword.Bluemix_notm}} 中应用程序的主机名。此值在 {{site.data.keyword.Bluemix_notm}} 环境中必须唯一。	|`host: ` *host_name*|
-|**name**	|{{site.data.keyword.Bluemix_notm}} 中的应用程序名称。此值在 {{site.data.keyword.Bluemix_notm}} 环境中必须唯一。	|`name: ` *appname*|
-|**path**	|应用程序的位置。此值可以是相对路径，也可以是绝对路径。	|`path: ` *path_to_application*|
-|**command**	|应用程序的定制启动命令，或用于运行脚本文件的命令。	|`command:` *custom_command* `command:` *bash ./run.sh*|
-|**memory**	|为应用程序分配的内存量。缺省值为 1G。	|`memory: 512M`|
-|**instances**	|要为应用程序创建的实例数。	|`instances: 2`|
-|**timeout**	|用于启动应用程序的最大时间量（以秒为单位）。缺省值为 60 秒。	|`timeout: 80`|
-|**no-route**	|布尔值，用于阻止将路径分配给仅在后台运行的应用程序。缺省值为 **false**。	|`no-route: true`|
-|**random-route**	|布尔值，用于将随机路径分配给应用程序。缺省值为 **false**。	|`random-route: true`|
-|**services**	|要绑定到应用程序的服务。	|`services: - mysql_maptest`|
-|**env**	|应用程序的定制环境变量。|`env: DEV_ENV: production`|
+|**buildpack**|定制 buildpack 的 URL 或名称。|`buildpack: ` *buildpack_URL*|
+|**disk_quota**|为应用程序分配的磁盘配额。缺省值为 1G。|`disk_quota: 500M`|
+|**domain**|{{site.data.keyword.Bluemix_notm}} 中应用程序的域名。|`domain:` ng.bluemix.net|
+|**host**|{{site.data.keyword.Bluemix_notm}} 中应用程序的主机名。此值在 {{site.data.keyword.Bluemix_notm}} 环境中必须唯一。|`host: ` *host_name*|
+|**name**|{{site.data.keyword.Bluemix_notm}} 中的应用程序名称。此值在 {{site.data.keyword.Bluemix_notm}} 环境中必须唯一。|`name: ` *appname*|
+|**path**|应用程序的位置。此值可以是相对路径，也可以是绝对路径。|`path: ` *path_to_application*|
+|**command**|应用程序的定制启动命令，或用于运行脚本文件的命令。|`command:` *custom_command* `command:` *bash ./run.sh*|
+|**memory**|为应用程序分配的内存量。缺省值为 1G。|`memory: 512M`|
+|**instances**|要为应用程序创建的实例数。|`instances: 2`|
+|**timeout**|用于启动应用程序的最大时间量（以秒为单位）。缺省值为 60 秒。|`timeout: 80`|
+|**no-route**|布尔值，用于阻止将路径分配给仅在后台运行的应用程序。缺省值为 **false**。|`no-route: true`|
+|**random-route**|布尔值，用于将随机路径分配给应用程序。缺省值为 **false**。|`random-route: true`|
+|**services**|要绑定到应用程序的服务。|`services: - mysql_maptest`|
+|**env**|应用程序的定制环境变量。|`env: DEV_ENV: production`|
 {: caption="表 1. 清单 YAML 文件中的受支持选项" caption-side="top"}
 
 ### 样本 manifest.yml 文件

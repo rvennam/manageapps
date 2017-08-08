@@ -137,10 +137,12 @@ Node.js 버전이 6.3.0 이상인 경우 *inspector*는 [V8 Inspector Integratio
 
 inspector 유틸리티는 기본적으로 *proxy*를 시작하지만, 원격으로 디버그하는 방법은 Node.js의 버전 및 *proxy*나 *noproxy*의 사용에 따라 달라집니다. 다음 표는 다양한 시나리오에서 원격 디버깅에 액세스하는 방법을 표시합니다. 
 
-| | proxy | noproxy |
+| | proxy| noproxy|
 |---|---|---|
-| < &nbsp; 6.3.0 | devconsole utility *at*<br/> https://myApp.mybluemix.net/bluemix-debug/inspector | http://127.0.0.1:8790
-| >= 6.3.0 | chrome-devtools URL | chrome-devtools URL
+| < &nbsp; 6.3.0| devconsole utility *at*<br/> https://myApp.mybluemix.net/bluemix-debug/inspector| http://127.0.0.1:8790
+| >= 6.3.0| chrome-devtools URL
+
+| chrome-devtools URL
 
 *noproxy* 및 버전이 6.3.0 미만인 Node.js의 경우 로컬 포트 전달을 통해 URL에 액세스할 수 있습니다. 예:
 

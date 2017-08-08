@@ -123,7 +123,7 @@ $ cf start APPLICATION_NAME
 
 從指令行介面將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，必須依據您的應用程式語言及架構，提供建置套件作為運行環境。您也可以使用 Delivery Pipeline 服務，將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。
 
-{{site.data.keyword.Bluemix_notm}} 提供支援 Java 及 Node.js 的內建建置套件。如果您是使用這些語言及架構，則在使用指令行介面來部署應用程式時，不需要指定建置套件。因為 {{site.data.keyword.Bluemix_notm}} 是建置在 Cloud Foundry 上，所以指令預設為這些建置套件。
+{{site.data.keyword.Bluemix_notm}} 提供支援 Java 及 Node.js 的內建建置套件。如果您是使用這些語言及架構，則在使用指令行介面來部署應用程式時，不需要指定建置套件。因為 {{site.data.keyword.Bluemix_notm}} 是以 Cloud Foundry 為建置基礎，所以指令預設為這些建置套件。
 
 如果您使用外部建置套件，則必須在從命令提示字元將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，使用 **-b** 選項來指定建置套件的 URL。
 
@@ -223,19 +223,19 @@ cf push -f appManifest.yml
 
 |選項	|說明	|用法或範例|
 |:----------|:--------------|:---------------|
-|**buildpack**	|自訂建置套件的 URL 或名稱。	|`buildpack: ` *buildpack_URL*|
-|**disk_quota**	|配置給應用程式的磁碟限額。預設值為 1 G。	|`disk_quota: 500M`|
-|**domain**	|{{site.data.keyword.Bluemix_notm}} 中應用程式的網域名稱。	|`domain:` ng.bluemix.net|
-|**host**	|{{site.data.keyword.Bluemix_notm}} 中應用程式的主機名稱。此值必須是 {{site.data.keyword.Bluemix_notm}} 環境中的唯一值。	|`host: ` *host_name*|
-|**name**	|{{site.data.keyword.Bluemix_notm}} 中的應用程式名稱。此值必須是 {{site.data.keyword.Bluemix_notm}} 環境中的唯一值。	|`name: ` *appname*|
-|**path**	|應用程式的位置。此值可以是相對路徑或絕對路徑。	|`path: ` *path_to_application*|
-|**command**	|應用程式的自訂啟動指令，或執行 Script 檔的指令。	|`command:` *custom_command* `command:` *bash ./run.sh*|
-|**memory**	|要配置給應用程式的記憶體量。預設值為 1G。	|`memory: 512M`|
-|**instances**	|要為應用程式建立的實例數。	|`instances: 2`|
-|**timeout**	|用來啟動應用程式的時間量上限（秒）。預設值為 60 秒。	|`timeout: 80`|
-|**no-route**	|布林值，避免在應用程式只是在背景中執行時指派路徑給該應用程式。預設值為 **false**。	|`no-route: true`|
-|**random-route**	|布林值，將隨機路徑指派給應用程式。預設值為 **false**。	|`random-route: true`|
-|**services**	|要連結至應用程式的服務。	|`services:   - mysql_maptest`|
+|**buildpack**	|自訂建置套件的 URL 或名稱。|`buildpack: ` *buildpack_URL*|
+|**disk_quota**	|配置給應用程式的磁碟限額。預設值為 1 G。|`disk_quota: 500M`|
+|**domain**	|{{site.data.keyword.Bluemix_notm}} 中應用程式的網域名稱。|`domain:` ng.bluemix.net|
+|**host**	|{{site.data.keyword.Bluemix_notm}} 中應用程式的主機名稱。此值必須是 {{site.data.keyword.Bluemix_notm}} 環境中的唯一值。|`host: ` *host_name*|
+|**name**	|{{site.data.keyword.Bluemix_notm}} 中的應用程式名稱。此值必須是 {{site.data.keyword.Bluemix_notm}} 環境中的唯一值。|`name: ` *appname*|
+|**path**	|應用程式的位置。此值可以是相對路徑或絕對路徑。|`path: ` *path_to_application*|
+|**command**	|應用程式的自訂啟動指令，或執行 Script 檔的指令。|`command:` *custom_command* `command:` *bash ./run.sh*|
+|**memory**	|要配置給應用程式的記憶體量。預設值為 1G。|`memory: 512M`|
+|**instances**	|要為應用程式建立的實例數。|`instances: 2`|
+|**timeout**	|用來啟動應用程式的時間量上限（秒）。預設值為 60 秒。|`timeout: 80`|
+|**no-route**	|布林值，避免在應用程式只是在背景中執行時指派路徑給該應用程式。預設值為 **false**。|`no-route: true`|
+|**random-route**	|布林值，將隨機路徑指派給應用程式。預設值為 **false**。|`random-route: true`|
+|**services**	|要連結至應用程式的服務。|`services: - mysql_maptest`|
 |**env**	|應用程式的自訂環境變數。|`env: DEV_ENV: production`|
 {: caption="表 1. 資訊清單 YAML 檔案中的支援選項" caption-side="top"}
 

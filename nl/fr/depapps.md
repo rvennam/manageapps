@@ -571,7 +571,7 @@ tmp/
 ## Liens connexes
 {: #general}
 
-* [Deploying with Application Manifests ![](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
-* [CF Manifest Generator ![](../icons/launch-glyph.svg)](http://cfmanigen.mybluemix.net/){:new_window}
-* [Getting Started with cf v6 ![](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}
+* [Deploying with Application Manifests ![External link icon](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html){:new_window}
+* [CF Manifest Generator ![External link icon](../icons/launch-glyph.svg)](http://cfmanigen.mybluemix.net/){:new_window}
+* [Getting Started with cf v6 ![External link icon](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/installcf/whats-new-v6.html){:new_window}
 * [Initiation à IBM Continuous Delivery Pipeline for Bluemix](/docs/services/DeliveryPipeline/index.html#getstartwithCD)

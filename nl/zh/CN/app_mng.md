@@ -137,10 +137,12 @@ $ cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
 
 缺省情况下，inspector 实用程序会启动 *proxy*，但远程调试方式取决于 Node.js 版本以及使用的是 *proxy* 还是 *noproxy*。下表显示了如何在各种场景中访问远程调试。
 
-| | proxy | noproxy |
+| | proxy| noproxy|
 |---|---|---|
-| < &nbsp; 6.3.0 | devconsole 实用程序*：*<br/> https://myApp.mybluemix.net/bluemix-debug/inspector | http://127.0.0.1:8790
-| >= 6.3.0 | chrome-devtools URL | chrome-devtools URL
+| < &nbsp; 6.3.0| devconsole 实用程序*：*<br/> https://myApp.mybluemix.net/bluemix-debug/inspector| http://127.0.0.1:8790
+| >= 6.3.0| chrome-devtools URL
+
+| chrome-devtools URL
 
 对于 *noproxy* 以及 6.3.0 之前的 Node.js 版本，通过本地端口转发启用对 URL 的访问。例如：
 

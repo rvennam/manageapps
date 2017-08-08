@@ -34,7 +34,7 @@ Alle von Ihnen neu erstellten Anwendungen werden mit Diego ausgeführt. Sie müs
 ### Staging einer Anwendung
 {: #diego}
 
-Während der Staging-Phase kümmert sich Diego um alle Aspekte, die mit der Anwendungsontainerkoordination in Verbindung stehen. Wenn Sie eine Push-Operation für eine App durchführen, sendet der Cloud-Controller eine entsprechende Staging-Anforderung an Diego, damit die Task der Zuordnung der App-Instanzen übernommen wird. Mit dem Diego-Back-End werden Anwendungscontainer so koordiniert, dass Fehlertoleranz und langfristige Konsistenz sichergestellt sind. Dadurch wird die Last über eine Reihe von virtuellen Maschinen (auch 'Zellen' genannt) ausgeglichen. Des Weiteren wird durch Diego sichergestellt, dass Benutzer auf die Protokolle ihrer Apps zugreifen können. Alle Diego-Komponenten sind konzeptionsgemäß in Gruppen zusammengefasst. Dies bedeutet, dass Sie unterschiedliche Verfügbarkeitszonen einrichten können.
+Während der Staging-Phase kümmert sich Diego um alle Aspekte, die mit der Anwendungscontainerkoordination in Verbindung stehen. Wenn Sie eine Push-Operation für eine App durchführen, sendet der Cloud-Controller eine entsprechende Staging-Anforderung an Diego, damit die Task der Zuordnung der App-Instanzen übernommen wird. Mit dem Diego-Back-End werden Anwendungscontainer so koordiniert, dass Fehlertoleranz und langfristige Konsistenz sichergestellt sind. Dadurch wird die Last über eine Reihe von virtuellen Maschinen (auch 'Zellen' genannt) ausgeglichen. Des Weiteren wird durch Diego sichergestellt, dass Benutzer auf die Protokolle ihrer Apps zugreifen können. Alle Diego-Komponenten sind konzeptionsgemäß in Gruppen zusammengefasst. Dies bedeutet, dass Sie unterschiedliche Verfügbarkeitszonen einrichten können.
 
 Bei der Validierung des App-Status unterstützt Diego dieselben PORT-basierten Prüfungen, die für den DEA verwendet wurden. Diego ist konzeptionsbedingt jedoch auch in der Lage, eher generische Optionen wie URL-basierte Statusprüfungen zu bieten, die künftig möglich sein können.
 
@@ -254,7 +254,7 @@ cf push -f appManifest.yml
 <p>  </p>
 
 
-|Optionen	|Beschreibung	|Verwendung oder Beispiel|
+|Optionen |Beschreibung |Verwendung oder Beispiel|
 |:----------|:--------------|:---------------|
 |**buildpack**	|Die URL oder der Name des angepassten Buildpacks.	|`buildpack:` *Buildpack-URL*|
 |**disk_quota**	|Das Datenträgerkontingent, das einer Anwendung zugeordnet wird. Der Standardwert ist 1 GB.	|`disk_quota: 500M`|

@@ -125,8 +125,7 @@ tipos de certificados a seguir são suportados no
   **Chave privada**
 
     Um padrão de algoritmo usado para criptografar mensagens que somente a chave pública
-correspondente pode decriptografar. A chave privada também é usada para decriptografar mensagens que foram criptografadas pela chave pública correspondente. A chave privada é
-mantida no sistema do usuário e é protegida por uma senha.
+correspondente pode decriptografar. A chave privada também é usada para decriptografar mensagens que foram criptografadas pela chave pública correspondente. A chave privada é mantida no sistema do usuário e é protegida por uma senha.
 
     Os tipos de chaves privadas a seguir são suportados no
 {{site.data.keyword.Bluemix_notm}}:
@@ -138,9 +137,8 @@ mantida no sistema do usuário e é protegida por uma senha.
 
   **Certificado intermediário**
 
-    Um certificado subordinado que é emitido pela autoridade
-de certificação raiz confiável (CA) especificamente para emitir certificados
-do servidor da entidade final. O resultado é uma cadeia de certificados que inicia na
+    Um certificado subordinado que é emitido pela autoridade de certificação raiz confiável
+(CA) especificamente para emitir certificados do servidor de entidade final. O resultado é uma cadeia de certificados que inicia na
 autoridade de certificação raiz confiável, passa pelo certificado intermediário e
 termina com o certificado SSL emitido para a organização.
 
@@ -157,7 +155,7 @@ produção.
   **Nota:** o recurso de certificado customizado no gerenciamento de domínio do {{site.data.keyword.Bluemix_notm}} depende da extensão Server Name Indication (SNI) do protocolo de Segurança da Camada de Transporte (TLS). Portanto, o código do cliente que acessa os
 aplicativos {{site.data.keyword.Bluemix_notm}}
 protegidos pelos certificados customizados deve suportar a extensão SNI na implementação
-do TLS. Para obter mais informações, veja a [seção 7.4.2 do RFC 4346 ![Ícone de link externo](../icons/launch-glyph.svg)](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}.
+do TLS. Para obter mais informações, veja a [seção 7.4.2 da RFC 4346 ![Ícone de link externo](../icons/launch-glyph.svg)](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window}.
 
   **Armazenamento confiável de certificado de cliente**
 

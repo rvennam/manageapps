@@ -131,7 +131,7 @@ Wählen Sie dann, um eine Verbindung mit JConsole herzustellen, die Option für 
 #### inspector
 {: #inspector}
 
-Bei Versionen von Node.js vor Version 6.3.0 aktiviert *inspector* die Node Inspector-Debuggerschnittstelle. Der Prozess für *inspector* wird in Ihrem Anwendungscontainer ausgeführt. Setzen Sie dieses Dienstprogramm ein, um CPU-Nutzungsprofile zu erstellen, Unterbrechungspunkte hinzuzufügen und Code zu debuggen,während Ihre Anwendung unter {{site.data.keyword.Bluemix_notm}} ausgeführt wird. Weitere Informationen zum Node Inspector-Modul finden Sie Thema zu ['node-inspector' unter GitHub ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/node-inspector/node-inspector){:new_window}.
+Bei Versionen von Node.js vor Version 6.3.0 aktiviert *inspector* die Node Inspector-Debuggerschnittstelle. Der Prozess für *inspector* wird in Ihrem Anwendungscontainer ausgeführt. Setzen Sie dieses Dienstprogramm ein, um CPU-Nutzungsprofile zu erstellen, Unterbrechungspunkte hinzuzufügen und Code zu debuggen, während Ihre Anwendung unter {{site.data.keyword.Bluemix_notm}} ausgeführt wird. Weitere Informationen zum Node Inspector-Modul finden Sie Thema zu ['node-inspector' unter GitHub ![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/node-inspector/node-inspector){:new_window}.
 
 Bei Versionen von Node.js ab Version 6.3.0 verwendet *inspector* die [V8 Inspector-Integration für Node.js ![Symbol für externen Link](../icons/launch-glyph.svg)](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}.
 

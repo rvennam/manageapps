@@ -47,7 +47,7 @@ solicitações de seu domínio customizado serão roteadas para seu aplicativo n
 
   2. Inclua a rota com o domínio customizado para um aplicativo.
 
-    1. Clique no ícone **Menu** ![Ícone Menu](../icons/icon_hamburger.svg) &gt; **Painel**, em seguida, clique na linha para o aplicativo no qual você deseja incluir a rota. A página
+    1. Clique no ícone **Menu** ![Ícone Menu](../icons/icon_hamburger.svg) &gt; **Painel** e, em seguida, clique na linha do aplicativo no qual você deseja incluir a rota. A página
 **Visão geral** é exibida.
 
 	2. No menu **Rotas**, selecione **Editar rotas**.
@@ -99,7 +99,7 @@ solicitações de seu domínio customizado serão roteadas para seu aplicativo n
 
 Após configurar o domínio customizado no {{site.data.keyword.Bluemix_notm}}, deve-se mapear o domínio customizado para o domínio do sistema do {{site.data.keyword.Bluemix_notm}} em seu servidor DNS registrado:
 
-  1. Configure um registro 'CNAME' para o nome de domínio customizado em seu servidor DNS. Etapas para configurar o registro CNAME variam dependendo de seu provedor DNS. Por exemplo, se você estiver usando o GoDaddy, siga a orientação [Ajuda de domínios ![Ícone de link externo](../icons/launch-glyph.svg)](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} do GoDaddy.
+  1. Configure um registro 'CNAME' para o nome de domínio customizado em seu servidor DNS. Etapas para configurar o registro CNAME variam dependendo de seu provedor DNS. Por exemplo, se estiver usando o GoDaddy, siga a orientação [Ajuda de domínios ![Ícone de link externo](../icons/launch-glyph.svg)](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} do GoDaddy.
   2. Mapeie o nome do domínio customizado para o terminal seguro para a região do {{site.data.keyword.Bluemix_notm}} em que seu aplicativo está em execução. Use os terminais da região a seguir para fornecer a rota da URL alocada para a sua organização no {{site.data.keyword.Bluemix_notm}}:
 
     * US-SOUTH: `secure.us-south.bluemix.net`

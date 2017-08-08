@@ -86,7 +86,7 @@ Per convalidare su quale backend l'applicazione è in esecuzione, utilizzare il 
 I seguenti sono i problemi noti che potresti dover risolvere durante la migrazione delle tue applicazioni a Diego:
 
   * Le applicazioni di lavoro distribuite con l'opzione `--no-route` non sono riportate come integre. Per evitare questo, disabilita il controllo di integrità basato sulla porta con il comando `cf set-health-check APP_NAME none`.
-  * Il comando **cf files** non è più supportato. Viene sostituito dal comando **cf ssh**. Per ulteriori dettagli sul comando **cf ssh**, vedi [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
+  * Il comando **cf files** non è più supportato. Viene sostituito dal comando **cf ssh**. Per ulteriori dettagli sul comando **cf ssh**, consulta [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh).
   * Alcune applicazioni potrebbero utilizzare un gran numero di descrittori file (inode). Se riscontri questo problema, devi aumentare la quota disco della tua applicazione con il comando `cf scale APP_NAME [-k DISK]`.
 
 Per l'elenco completo dei problemi noti, vedi la pagina della documentazione Cloud Foundry per [Migrating to Diego ![Icona link esterno](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/diego-design-notes/blob/master/migrating-to-diego.md){: new_window}.
@@ -275,9 +275,9 @@ cf push -f appManifest.yml
 |:----------|:--------------|:---------------|
 |**buildpack**	|L'URL o il nome del pacchetto di build personalizzato.	|`buildpack: ` *URL_pacchettodibuild*|
 |**disk_quota**	|La quota di disco assegnata per un'applicazione. Il valore predefinito è 1 G.	|`disk_quota: 500M`|
-|**dominio**	|Il nome dominio dell'applicazione in {{site.data.keyword.Bluemix_notm}}.	|`domain:` ng.bluemix.net|
+|**domain**	|Il nome dominio dell'applicazione in {{site.data.keyword.Bluemix_notm}}.	|`domain:` ng.bluemix.net|
 |**host**	|Il nome host dell'applicazione in {{site.data.keyword.Bluemix_notm}}. Questo valore deve essere univoco nell'ambiente {{site.data.keyword.Bluemix_notm}}.	|`host: ` *home_host*|
-|**nome**	|Il nome applicazione in {{site.data.keyword.Bluemix_notm}}. Questo valore deve essere univoco nell'ambiente {{site.data.keyword.Bluemix_notm}}.	|`name: ` *nomeapplicazione*|
+|**name**	|Il nome applicazione in {{site.data.keyword.Bluemix_notm}}. Questo valore deve essere univoco nell'ambiente {{site.data.keyword.Bluemix_notm}}.	|`name: ` *nomeapplicazione*|
 |**path**	|L'ubicazione della tua applicazione. Questo valore può essere un percorso relativo o percorso assoluto.	|`path: ` *percorso_alla_applicazione*|
 |**command**	|Il comando di avvio personalizzato per la tua applicazione o il comando per eseguire i file di script.	|`command:` *custom_command* `command:` *bash ./run.sh*|
 |**memory**	|La quantità di memoria da assegnare per l'applicazione. Il valore predefinito è 1G.	|`memory: 512M`|

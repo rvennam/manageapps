@@ -113,7 +113,7 @@ Em seguida, para se conectar ao Eclipse, use "Configuração Java remota" e espe
 O utilitário *jmx* ativa o Conector de REST do JMX para permitir que um cliente JMX remoto gerencie o aplicativo usando credenciais do
 usuário do {{site.data.keyword.Bluemix_notm}}.
 
-Para obter mais informações sobre como configurar um conector JMX, veja [Configurando uma conexão JMX segura para o perfil Liberty ![Ícone de link externo](../icons/launch-glyph.svg)](https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_admin_restconnector.html){:new_window}.
+Para obter mais informações sobre como configurar um conector JMX, veja [Configurando a conexão JMX segura para o perfil Liberty ![Ícone de link externo](../icons/launch-glyph.svg)](https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_admin_restconnector.html){:new_window}.
 
 O utilitário *jmx* não inicia o proxy.
 
@@ -138,9 +138,9 @@ Em seguida, para se conectar ao JConsole, escolha "Processo remoto", especifique
 #### inspetor
 {: #inspector}
 
-Para versões do Node.js anteriores à 6.3.0, o *inspector* ativa a interface com o depurador do inspetor de nó. O processo do *inspetor* é executado em seu contêiner de aplicativo. Use esse utilitário para criar perfis de uso da CPU, incluir pontos de interrupção e depurar código, tudo enquanto seu aplicativo estiver em execução no {{site.data.keyword.Bluemix_notm}}. Para obter mais informações sobre o módulo do inspetor de nó, veja [node-inspector no GitHub ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/node-inspector/node-inspector){:new_window}.
+Para versões do Node.js anteriores à 6.3.0, o *inspector* ativa a interface com o depurador do inspetor de nó. O processo do *inspetor* é executado em seu contêiner de aplicativo. Use esse utilitário para criar perfis de uso da CPU, incluir pontos de interrupção e depurar código, tudo enquanto seu aplicativo estiver em execução no {{site.data.keyword.Bluemix_notm}}. Para obter mais informações sobre o módulo inspetor do nó, veja [node-inspector no GitHub ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/node-inspector/node-inspector){:new_window}.
 
-Para versões do Node.js 6.3.0 e superiores, o *inspector* utiliza o [V8 Inspector Integration for Node.js ![Ícone de link externo](../icons/launch-glyph.svg)](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}.
+Para o Node.js versões 6.3.0 e superiores, o *inspetor* utiliza o [V8 Inspector Integration for Node.js ![Ícone de link externo](../icons/launch-glyph.svg)](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}.
 
 O utilitário inspector inicia o *proxy* por padrão, mas como você depurará remotamente dependerá da versão do Node.js e do uso de *proxy* ou *noproxy*.  A tabela a seguir mostra como acessar a depuração remota em vários cenários.
 

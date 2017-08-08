@@ -91,7 +91,7 @@ Sie können eine angepasste Domäne in {{site.data.keyword.Bluemix_notm}} erstel
 
 Nach der Konfiguration der angepassten Domäne in {{site.data.keyword.Bluemix_notm}} müssen Sie die angepasste Domäne der {{site.data.keyword.Bluemix_notm}}-Systemdomäne auf Ihrem registrierten DNS-Server zuordnen:
 
-  1. Richten Sie einen Datensatz 'CNAME' für den Namen der angepassten Domäne auf Ihrem DNS-Server ein. Die Schritte zum Einrichten des CNAME-Datensatzes hängen von Ihrem DNS-Provicer ab. Beispiel: Wenn Sie GoDaddy verwenden, befolgen Sie die Anleitung [Domains Help ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} von GoDaddy.
+  1. Richten Sie einen Datensatz 'CNAME' für den Namen der angepassten Domäne auf Ihrem DNS-Server ein. Die Schritte zum Einrichten des CNAME-Datensatzes hängen von Ihrem DNS-Provider ab. Beispiel: Wenn Sie GoDaddy verwenden, befolgen Sie die Anleitung [Domains Help ![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} von GoDaddy.
   2. Ordnen Sie den Namen der angepassten Domäne dem sicheren Endpunkt für die {{site.data.keyword.Bluemix_notm}}-Region zu, in der Ihre Anwendung ausgeführt wird. Verwenden Sie die folgenden Regionsendpunkte, um die URL-Route anzugeben, die Ihrer Organisation in {{site.data.keyword.Bluemix_notm}} zugeordnet ist:
 
     * US-SOUTH: `secure.us-south.bluemix.net`

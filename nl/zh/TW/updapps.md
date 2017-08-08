@@ -82,7 +82,7 @@ cf map-route myapp mydomain -n host_name
 
     *host_name*
 
-        您要用於應用程式的路徑中的主機名稱。
+        您要用於應用程式之路徑中的主機名稱。
 
     *mycontainergroup*
 

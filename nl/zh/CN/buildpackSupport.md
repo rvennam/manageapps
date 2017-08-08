@@ -41,4 +41,4 @@ Cloud Foundry 社区提供了以下内置社区 Buildpack：
 {: #external_buildpacks}
 
 
-对于外部 buildpack，IBM 不会提供支持。您可能需要联系 Cloud Foundry 社区来获取支持。
+对于外部 buildpack，IBM 不会提供支持。您可能需要联系 Cloud Foundry 社区来获得支持。

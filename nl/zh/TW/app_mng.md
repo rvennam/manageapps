@@ -29,7 +29,7 @@ lastupdated: "2017-01-11"
 
 *proxy* 提供您應用程式與 {{site.data.keyword.Bluemix_notm}} 之間的最低應用程式管理。
 
-若已啟用，建置套件會啟動位在應用程式運行環境與容器之間的 Proxy 代理程式。*proxy* 公用程式會處理應用程式接收的所有要求。根據要求類型，它會執行「應用程式管理」動作，或將要求轉遞給應用程式。*proxy* 容許啟用大部分其他「應用程式管理」公用程式。透過啟用 *proxy*，即使應用程式損毀，您的應用程式容器還是會繼續運作。Proxy 代理程式也容許進行漸進式檔案更新，以啟用 Node.js 應用程式的「即時編輯」模式。
+若已啟用，建置套件會啟動位在應用程式運行環境與容器之間的 Proxy 代理程式。*proxy* 公用程式會處理應用程式接收的所有要求。根據要求類型，它會執行「應用程式管理」動作，或將要求轉遞給應用程式。*proxy* 容許啟用大部分其他「應用程式管理」公用程式。透過啟用 *proxy*，即使應用程式當機，您的應用程式容器還是會繼續運作。Proxy 代理程式也容許進行漸進式檔案更新，以啟用 Node.js 應用程式的「即時編輯」模式。
 
 #### noproxy
 {: #noproxy}
@@ -137,10 +137,12 @@ $ cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
 
 依預設，inspector 公用程式會啟動 *proxy*，但遠端除錯的方式取決於 Node.js 版本以及是使用 *proxy* 還是 *noproxy*。下表顯示在各種情境下如何存取遠端除錯。
 
-| | proxy | noproxy |
+| | proxy| noproxy|
 |---|---|---|
-| < &nbsp; 6.3.0 | devconsole 公用程式，*網址為*<br/> https://myApp.mybluemix.net/bluemix-debug/inspector | http://127.0.0.1:8790
-| >= 6.3.0 | chrome-devtools URL | chrome-devtools URL
+| < &nbsp; 6.3.0| devconsole 公用程式，*網址為*<br/> https://myApp.mybluemix.net/bluemix-debug/inspector| http://127.0.0.1:8790
+| >= 6.3.0| chrome-devtools URL
+
+| chrome-devtools URL
 
 針對 *noproxy* 及 Node.js 6.3.0 之前的版本，透過本端埠轉遞啟用 URL 存取。例如：
 

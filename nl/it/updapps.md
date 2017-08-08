@@ -45,7 +45,7 @@ oppure l'interfaccia riga di comando cf.
 
   2. Aggiungi la rotta con il dominio personalizzato a un'applicazione.
 
-    1. Fai clic sull'icona **Menu** ![icona Menu](../icons/icon_hamburger.svg) &gt; **Dashboard**, quindi fai clic sulla riga dell'applicazione a cui desideri aggiungere la rotta. Viene visualizzata la pagina **Panoramica**.
+    1. Fai clic sull'icona **Menu** ![Icona Menu](../icons/icon_hamburger.svg) &gt; **Dashboard**, quindi fai clic sulla riga dell'applicazione a cui desideri aggiungere la rotta. Viene visualizzata la pagina **Panoramica**.
 
 	2. Dal menu **Rotte**, seleziona **Modifica rotte**.
 

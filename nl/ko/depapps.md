@@ -223,19 +223,19 @@ cf push -f appManifest.yml
 
 |옵션	|설명	|사용법 또는 예|
 |:----------|:--------------|:---------------|
-|**buildpack**	|사용자 정의 빌드팩의 URL 또는 이름입니다.	|`buildpack: ` *buildpack_URL*|
-|**disk_quota**	|애플리케이션에 할당되는 디스크 할당량입니다. 기본값은 1G입니다.	|`disk_quota: 500M`|
-|**domain**	|{{site.data.keyword.Bluemix_notm}}에서 애플리케이션의 도메인 이름입니다.	|`domain:` ng.bluemix.net|
-|**host**	|{{site.data.keyword.Bluemix_notm}}에서 애플리케이션의 호스트 이름입니다. 이 값은 {{site.data.keyword.Bluemix_notm}} 환경에서 고유해야 합니다.	|`host: ` *host_name*|
-|**name**	|{{site.data.keyword.Bluemix_notm}}에서 애플리케이션 이름입니다. 이 값은 {{site.data.keyword.Bluemix_notm}} 환경에서 고유해야 합니다.	|`name: ` *appname*|
-|**path**	|애플리케이션의 위치입니다. 이 값은 상대 경로 또는 절대 경로일 수 있습니다.	|`path: ` *path_to_application*|
-|**command**	|애플리케이션에 대한 사용자 정의 시작 명령 또는 스크립트 파일을 실행하는 명령입니다.	|`command:` *custom_command* `command:` *bash ./run.sh*|
-|**memory**	|애플리케이션에 할당할 메모리의 양입니다. 기본값은 1G입니다.	|`memory: 512M`|
-|**instances**	|애플리케이션에 대해 작성할 인스턴스 수입니다.	|`instances: 2`|
-|**timeout**	|애플리케이션을 시작하는 데 사용되는 최대 시간(초)입니다. 기본값은 60초입니다.	|`timeout: 80`|
-|**no-route**	|애플리케이션이 백그라운드에서 실행 중인 경우, 라우트가 애플리케이션에 지정되지 않도록 하는 부울 값입니다. 기본값은 **false**입니다.	|`no-route: true`|
-|**random-route**	|애플리케이션에 랜덤 라우트를 지정하는 부울 값입니다. 기본값은 **false**입니다.	|`random-route: true`|
-|**services**	|애플리케이션에 바인딩할 서비스입니다.	|`services: - mysql_maptest`|
+|**buildpack**	|사용자 정의 빌드팩의 URL 또는 이름입니다.|`buildpack: ` *buildpack_URL*|
+|**disk_quota**	|애플리케이션에 할당되는 디스크 할당량입니다. 기본값은 1G입니다.|`disk_quota: 500M`|
+|**domain**	|{{site.data.keyword.Bluemix_notm}}에서 애플리케이션의 도메인 이름입니다.|`domain:` ng.bluemix.net|
+|**host**	|{{site.data.keyword.Bluemix_notm}}에서 애플리케이션의 호스트 이름입니다. 이 값은 {{site.data.keyword.Bluemix_notm}} 환경에서 고유해야 합니다.|`host: ` *host_name*|
+|**name**	|{{site.data.keyword.Bluemix_notm}}에서 애플리케이션 이름입니다. 이 값은 {{site.data.keyword.Bluemix_notm}} 환경에서 고유해야 합니다.|`name: ` *appname*|
+|**path**	|애플리케이션의 위치입니다. 이 값은 상대 경로 또는 절대 경로일 수 있습니다.|`path: ` *path_to_application*|
+|**command**	|애플리케이션에 대한 사용자 정의 시작 명령 또는 스크립트 파일을 실행하는 명령입니다.|`command:` *custom_command* `command:` *bash ./run.sh*|
+|**memory**	|애플리케이션에 할당할 메모리의 양입니다. 기본값은 1G입니다.|`memory: 512M`|
+|**instances**	|애플리케이션에 대해 작성할 인스턴스 수입니다.|`instances: 2`|
+|**timeout**	|애플리케이션을 시작하는 데 사용되는 최대 시간(초)입니다. 기본값은 60초입니다.|`timeout: 80`|
+|**no-route**	|애플리케이션이 백그라운드에서 실행 중인 경우, 라우트가 애플리케이션에 지정되지 않도록 하는 부울 값입니다. 기본값은 **false**입니다.|`no-route: true`|
+|**random-route**	|애플리케이션에 랜덤 라우트를 지정하는 부울 값입니다. 기본값은 **false**입니다.|`random-route: true`|
+|**services**	|애플리케이션에 바인딩할 서비스입니다.|`services: - mysql_maptest`|
 |**env**	|애플리케이션에 대한 사용자 정의 환경 변수입니다.|`env: DEV_ENV: production`|
 {: caption="표 1. Manifest YAML 파일의 지원되는 옵션" caption-side="top"}
 
