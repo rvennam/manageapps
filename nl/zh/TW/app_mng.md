@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-07-26"
 
 ---
 
@@ -55,9 +55,9 @@ lastupdated: "2017-01-11"
 #### hc
 {: #hc}
 
-「(*hc*) 性能檢測中心」代理程式可讓「性能檢測中心」用戶端監視您的應用程式。
+「(*hc*) 性能檢測中心」代理程式可讓「性能檢測中心」用戶端監視您的應用程式。*hc* 代理程式只可用於 IBM SDK for Node.js 運行環境版本。如需現行運行環境集合，請參閱 [sdk-for-nodejs 建置套件的最新更新](/docs/runtimes/nodejs/updates.html)。
 
-「性能檢測中心」支援透過使用 IBM Monitoring and Diagnostic Tools 來分析 Liberty 及 Node.js 應用程式的效能。如需相關資訊，請參閱 [How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}} ![外部鏈結圖示](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){: new_window}。</p></li>
+「性能檢測中心」支援透過使用 IBM Monitoring and Diagnostic Tools 來分析 Liberty 及 Node.js 應用程式的效能。如需相關資訊，請參閱 [How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){:new_window}。
 
 *hc* 公用程式也會啟動 *proxy*。
 
@@ -67,7 +67,7 @@ lastupdated: "2017-01-11"
 $ cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
 ```
 
-接下來，若要使用「性能檢測中心」用戶端進行連線，請使用 [MQTT connection ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www.ibm.com/support/knowledgecenter/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/connectingtojvm.html){: new_window}，然後將主機指定為 `127.0.0.1`，並將埠指定為 `1883`。
+接下來，若要使用「性能檢測中心」用戶端進行連線，請使用 [MQTT 連線 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://www.ibm.com/support/knowledgecenter/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/connectingtojvm.html){: new_window}，然後將主機指定為 `127.0.0.1`，並將埠指定為 `1883`。
 
 #### shell
 {: #shell}
@@ -107,14 +107,14 @@ $ cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
 
 *jmx* 公用程式可使用 {{site.data.keyword.Bluemix_notm}} 使用者認證，讓「JMX REST 連接器」容許遠端 JMX 用戶端管理應用程式。
 
-如需配置 JMX 連接器的相關資訊，請參閱 [Configuring secure JMX connection to the Liberty profile ![外部鏈結圖示](../icons/launch-glyph.svg)](https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_admin_restconnector.html){:new_window}。
+如需配置 JMX 連接器的相關資訊，請參閱 [Configuring secure JMX connection to the Liberty profile ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_admin_restconnector.html){:new_window}。
 
 *jmx* 公用程式不會啟動 proxy。
 
 #### localjmx
 {: #localjmx}
 
-*localjmx* 公用程式會啟用 [localConnector-1.0 ![外部鏈結圖示](../icons/launch-glyph.svg)](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window} Liberty 特性。這與本端埠轉遞合併使用時，可啟用容許遠端 JMX 用戶端管理應用程式的替代方式。
+*localjmx* 公用程式會啟用 [localConnector-1.0 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window} Liberty 特性。這與本端埠轉遞合併使用時，可啟用容許遠端 JMX 用戶端管理應用程式的替代方式。
 
 *localjmx* 公用程式僅適用於在 Diego Cell 上執行的應用程式。若要使用 *localjmx*，請先使用 `cf ssh` 指令來建立埠轉遞。例如：
 
@@ -131,9 +131,9 @@ $ cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
 #### inspector
 {: #inspector}
 
-針對 Node.js 6.3.0 之前的版本，*inspector* 會啟用 Node Inspector 除錯器介面。*inspector* 處理程序是在應用程式容器中執行。使用此公用程式，可建立 CPU 用量設定檔、新增岔斷點，以及對程式碼進行除錯，而這些作業都是應用程式在 {{site.data.keyword.Bluemix_notm}} 上執行時進行。如需 Node Inspector 模組的相關資訊，請參閱 [node-inspector on GitHub ![外部鏈結圖示](../icons/launch-glyph.svg)](https://github.com/node-inspector/node-inspector){:new_window}。
+針對 Node.js 6.3.0 之前的版本，*inspector* 會啟用 Node Inspector 除錯器介面。*inspector* 處理程序是在應用程式容器中執行。使用此公用程式，可建立 CPU 用量設定檔、新增岔斷點，以及對程式碼進行除錯，而這些作業都是應用程式在 {{site.data.keyword.Bluemix_notm}} 上執行時進行。如需 Node Inspector 模組的相關資訊，請參閱 [node-inspector on GitHub ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/node-inspector/node-inspector){:new_window}。
 
-針對 Node.js 6.3.0 版及以上版本，*inspector* 會使用 [V8 Inspector Integration for Node.js ![外部鏈結圖示](../icons/launch-glyph.svg)](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}。
+針對 Node.js 6.3.0 版及以上版本，*inspector* 會使用 [V8 Inspector Integration for Node.js ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}。
 
 依預設，inspector 公用程式會啟動 *proxy*，但遠端除錯的方式取決於 Node.js 版本以及是使用 *proxy* 還是 *noproxy*。下表顯示在各種情境下如何存取遠端除錯。
 
@@ -159,10 +159,8 @@ $ cf set-env <appName> BLUEMIX_APP_MGMT_INSPECTOR='{port: 9790}'
 針對 Node.js 6.3.0 版或以上版本，您會找到一則日誌訊息，內含可用來將 Chrome DevTools 附加至您應用程式的 URL。日誌訊息類似於下列內容：
 
 ```
-  2016-11-30T16:40:56.03-0500 [APP/0]      OUT Starting app with 'node --inspect=9229  app.js '
-  2016-11-30T16:40:56.17-0500 [APP/0]      ERR Debugger listening on port 9229.
-  2016-11-30T16:40:56.17-0500 [APP/0]      ERR To start debugging, open the following URL in Chrome:
-  2016-11-30T16:40:56.17-0500 [APP/0]      ERR     chrome-devtools://devtools/remote/serve_file...
+  2016-11-30T16:40:56.03-0500 [APP/0]      OUT You will need a SSH tunnel for port 9229 to be able to use the Chrome DevTools to remotely debug your app
+  2016-11-30T16:40:56.17-0500 [APP/0]      ERR Starting app with 'node --inspect=9229  app.js '
 ```
 
 透過本端埠轉遞啟用 URL 存取。例如：
@@ -171,7 +169,9 @@ $ cf set-env <appName> BLUEMIX_APP_MGMT_INSPECTOR='{port: 9790}'
 $ cf ssh -N -T -L 9229:127.0.0.1:9229 <appName>
 ```
 
-您需要最新版本的 Chrome Web 瀏覽器，才能瀏覽至此 URL。在此情境中，proxy 不會將資料流量遞送至 inspector。
+使用最新版本的 Chrome Web 瀏覽器，瀏覽至 **chrome://inspect**。從該 URL，您會看到您的應用程式與應用程式檔案的鏈結列在一起，例如 **file:///home/vcap/app/app.js**。  
+
+附註：在此情境中，proxy 不會將資料流量遞送至 inspector。
 
 #### trace
 {: #trace}

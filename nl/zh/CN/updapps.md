@@ -111,7 +111,7 @@ http://host_name.mydomain
 cf delete-route domain -n hostname -f
 ```
 
-*domain* 是域名，*hostname* 是应用程序的路径中的主机名。有关 **cf delete-route** 命令的更多信息，请键入 `cf delete-route -h`。
+*domain* 是域名，*hostname* 是应用程序的路径中的主机名。有关 **cf delete-route** 命令的更多信息，请输入 `cf delete-route -h`。
 
 ##蓝绿部署
 {: #blue_green}

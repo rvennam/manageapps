@@ -9,9 +9,8 @@
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
-	[将服务添加到应用程序](../services/reqnsi.html#add_service)
+	[向应用程序添加服务](../services/reqnsi.html#add_service)
 	depapps.md
-	[创建“部署到 Bluemix”按钮](../develop/deploy_button.html)
 	updapps.md
 	secapps.md
 	{: .navgroup-end}

@@ -11,7 +11,6 @@ Gestione delle applicazioni
 	{: .navgroup id="howto"}
 	[Aggiunta di un servizio alla tua applicazione](../services/reqnsi.html#add_service)
 	depapps.md
-	[Creazione di un pulsante Distribuisci a Bluemix](../develop/deploy_button.html)
 	updapps.md
 	secapps.md
 	{: .navgroup-end}

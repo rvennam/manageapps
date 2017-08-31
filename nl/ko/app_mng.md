@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-07-26"
 
 ---
 
@@ -55,9 +55,10 @@ App Management는 {{site.data.keyword.Bluemix}}에서 Liberty 및 Node.js 애플
 #### hc
 {: #hc}
 
-(*hc*) Health Center 에이전트를 사용하면 Health Center 클라이언트에서 애플리케이션을 모니터링할 수 있습니다.
+(*hc*) Health Center 에이전트를 사용하면 Health Center 클라이언트에서 애플리케이션을 모니터링할 수 있습니다. *hc* 에이전트는
+IBM SDK for Node.js 런타임 버전과만 사용 가능합니다. 현재 런타임 세트에 대해서는 [sdk-for-nodejs 빌드팩에 대한 최신 업데이트](/docs/runtimes/nodejs/updates.html)를 참조하십시오. 
 
-Health Center는 IBM 모니터링 및 진단 도구를 사용하여 Liberty 및 Node.js 애플리케이션의 성능을 분석할 수 있도록 지원합니다. 자세한 정보는 [How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}} ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){: new_window}를 참조하십시오. </p></li>
+Health Center는 IBM 모니터링 및 진단 도구를 사용하여 Liberty 및 Node.js 애플리케이션의 성능을 분석할 수 있도록 지원합니다. 자세한 정보는 [How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){:new_window}의 내용을 참조하십시오.
 
 *hc* 유틸리티는 또한 *proxy*를 시작합니다. 
 
@@ -67,7 +68,7 @@ Health Center는 IBM 모니터링 및 진단 도구를 사용하여 Liberty 및 
 $ cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
 ```
 
-다음으로, Health Center 클라이언트와 연결하려면 [MQTT 연결 ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://www.ibm.com/support/knowledgecenter/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/connectingtojvm.html){: new_window}을 사용하고 호스트를 `127.0.0.1`로, 포트를 `1883`으로 지정하십시오. 
+그 다음에 Health Center 클라이언트에 연결하려면 [MQTT 연결 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ibm.com/support/knowledgecenter/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/connectingtojvm.html){: new_window}을 사용하고 호스트는 `127.0.0.1`으로 지정하고 포트는 `1883`으로 지정하십시오.
 
 #### shell
 {: #shell}
@@ -107,14 +108,14 @@ $ cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
 
 *jmx* 유틸리티는 원격 JMX 클라이언트가 {{site.data.keyword.Bluemix_notm}} 사용자 신임 정보를 사용하여 애플리케이션을 관리할 수 있도록 JMX REST Connector를 사용 가능하게 설정합니다. 
 
-JMX 커넥터 구성에 대한 자세한 정보는 [Configuring secure JMX connection to the Liberty profile ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_admin_restconnector.html){:new_window}을 참조하십시오. 
+JMX 커넥터 구성에 대한 자세한 정보는 [Configuring secure JMX connection to the Liberty profile ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_admin_restconnector.html){:new_window}을 참조하십시오.
 
 *jmx* 유틸리티는 프록시를 시작하지 않습니다.
 
 #### localjmx
 {: #localjmx}
 
-*localjmx* 유틸리티는 [localConnector-1.0 ![외부 링크 아이콘](../icons/launch-glyph.svg)](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window} Liberty 기능을 사용으로 설정합니다. 로컬 포트 전달과 결합하면 원격 JMX 클라이언트가 애플리케이션을 관리할 수 있는 대체 방법을 사용할 수 있습니다. 
+*localjmx* 유틸리티는 [localConnector-1.0 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window} Liberty 기능을 사용으로 설정합니다. 로컬 포트 전달과 결합하면 원격 JMX 클라이언트가 애플리케이션을 관리할 수 있는 대체 방법을 사용할 수 있습니다. 
 
 *localjmx* 유틸리티만 Diego 셀에서 실행 중인 애플리케이션에 적용할 수 있습니다. *localjmx*를 사용하려면, 먼저 `cf ssh` 명령을 사용하여 포트 전달을 설정하십시오. 예:
 
@@ -131,9 +132,9 @@ $ cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
 #### inspector
 {: #inspector}
 
-Node.js 버전이 6.3.0 미만인 경우 *inspector*는 노드 검사기 디버거 인터페이스를 사용으로 설정합니다. *inspector* 프로세스가 애플리케이션 컨테이너에서 실행됩니다. 사용자 애플리케이션이 {{site.data.keyword.Bluemix_notm}}에서 실행되는 동안 CPU 사용량 프로파일을 작성하고 중단점을 추가하며 코드를 디버그하려면 이 유틸리티를 사용하십시오. 노드 검사기 모듈에 대한 자세한 정보는 [node-inspector on GitHub ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://github.com/node-inspector/node-inspector){:new_window}를 참조하십시오. 
+Node.js 버전이 6.3.0 미만인 경우 *inspector*는 노드 검사기 디버거 인터페이스를 사용으로 설정합니다. *inspector* 프로세스가 애플리케이션 컨테이너에서 실행됩니다. 사용자 애플리케이션이 {{site.data.keyword.Bluemix_notm}}에서 실행되는 동안 CPU 사용량 프로파일을 작성하고 중단점을 추가하며 코드를 디버그하려면 이 유틸리티를 사용하십시오. 노드 검사기 모듈에 대한 자세한 정보는 [node-inspector on GitHub ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/node-inspector/node-inspector){:new_window}을 참조하십시오.
 
-Node.js 버전이 6.3.0 이상인 경우 *inspector*는 [V8 Inspector Integration for Node.js ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}를 활용합니다. 
+Node.js 버전 6.3.0 이상인 경우, *inspector*는 [V8 Inspector Integration for Node.js ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}을 사용합니다.
 
 inspector 유틸리티는 기본적으로 *proxy*를 시작하지만, 원격으로 디버그하는 방법은 Node.js의 버전 및 *proxy*나 *noproxy*의 사용에 따라 달라집니다. 다음 표는 다양한 시나리오에서 원격 디버깅에 액세스하는 방법을 표시합니다. 
 
@@ -159,10 +160,8 @@ $ cf set-env <appName> BLUEMIX_APP_MGMT_INSPECTOR='{port: 9790}'
 Node.js 버전이 6.3.0 이상인 경우 Chrome DevTools를 앱에 연결하는 데 사용할 수 있는 URL이 포함된 로그 메시지를 찾을 수 있습니다. 로그 메시지는 다음과 유사합니다. 
 
 ```
-  2016-11-30T16:40:56.03-0500 [APP/0]      OUT Starting app with 'node --inspect=9229  app.js '
-  2016-11-30T16:40:56.17-0500 [APP/0]      ERR Debugger listening on port 9229.
-  2016-11-30T16:40:56.17-0500 [APP/0]      ERR To start debugging, open the following URL in Chrome:
-  2016-11-30T16:40:56.17-0500 [APP/0]      ERR     chrome-devtools://devtools/remote/serve_file...
+  2016-11-30T16:40:56.03-0500 [APP/0]      OUT You will need a SSH tunnel for port 9229 to be able to use the Chrome DevTools to remotely debug your app
+  2016-11-30T16:40:56.17-0500 [APP/0]      ERR Starting app with 'node --inspect=9229  app.js '
 ```
 
 로컬 포트 전달을 통해 URL에 대한 액세스를 사용으로 설정하십시오. 예:
@@ -171,7 +170,9 @@ Node.js 버전이 6.3.0 이상인 경우 Chrome DevTools를 앱에 연결하는 
 $ cf ssh -N -T -L 9229:127.0.0.1:9229 <appName>
 ```
 
-이 URL을 브라우징하려면 최신 버전의 Chrome 웹 브라우저가 필요합니다. 이 시나리오에서 프록시는 트래픽을 검사기로 라우팅하지 않습니다. 
+최신 버전의 Chrome 웹 브라우저를 사용하여 **chrome://inspect**를 찾아보기하십시오. 그 URL에서 **file:///home/vcap/app/app.js**와 같은 애플리케이션 파일에 대한 링크와 함께 나열된 앱을 보게 됩니다.   
+
+참고: 이 시나리오에서 프록시는 트래픽을 검사기로 라우팅하지 않습니다. 
 
 #### trace
 {: #trace}

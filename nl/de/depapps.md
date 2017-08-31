@@ -254,7 +254,7 @@ cf push -f appManifest.yml
 <p>  </p>
 
 
-|Optionen |Beschreibung |Verwendung oder Beispiel|
+|Optionen	|Beschreibung	|Verwendung oder Beispiel|
 |:----------|:--------------|:---------------|
 |**buildpack**	|Die URL oder der Name des angepassten Buildpacks.	|`buildpack:` *Buildpack-URL*|
 |**disk_quota**	|Das Datenträgerkontingent, das einer Anwendung zugeordnet wird. Der Standardwert ist 1 GB.	|`disk_quota: 500M`|

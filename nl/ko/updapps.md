@@ -270,7 +270,7 @@ cf unmap-route Blue mybluemix.net -n Blue
 cf unmap-route Green mybluemix.net -n Green
   ```
 
-  **결과:** CF 라우터가 *Blue* 앱에 대한 트래픽 전송을 중지합니다. *초록색* 앱이 URL `Blue.mybluemix.net`에 응답합니다..
+  **결과:** CF 라우터가 *Blue* 앱에 대한 트래픽 전송을 중지합니다. *초록색* 앱이 URL `Blue.mybluemix.net`에 응답합니다.
 
 6. 선택사항: 애플리케이션의 이전 버전(*Blue*)을 삭제하려는 경우, `cf delete` 명령을 사용하십시오.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-07-26"
 
 ---
 
@@ -56,9 +56,9 @@ Node バージョン 6.3.0 以上では、開発コンソールで、アプリ�
 #### hc
 {: #hc}
 
-(*hc*) ヘルス・センター・エージェントにより、アプリケーションをヘルス・センター・クライアントでモニターできます。
+(*hc*) ヘルス・センター・エージェントにより、アプリケーションをヘルス・センター・クライアントでモニターできます。*hc* エージェントは、IBM SDK for Node.js ランタイム・バージョンでのみ使用可能です。現行のランタイム・セットについては、[sdk-for-nodejs ビルドパックの最新更新](/docs/runtimes/nodejs/updates.html)を参照してください。
 
-ヘルス・センターでは、IBM Monitoring and Diagnostic Tools を使用した Liberty アプリケーションおよび Node.js アプリケーションのパフォーマンスの分析がサポートされます。詳しくは、[How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}} ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){: new_window} を参照してください。</p></li>
+ヘルス・センターでは、IBM Monitoring and Diagnostic Tools を使用した Liberty アプリケーションおよび Node.js アプリケーションのパフォーマンスの分析がサポートされます。詳細情報については、[How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){:new_window} を参照してください。
 
 *hc* ユーティリティーは *proxy* の開始も行います。
 
@@ -68,7 +68,7 @@ Node バージョン 6.3.0 以上では、開発コンソールで、アプリ�
 $ cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
 ```
 
-次に、ヘルス・センター・クライアントと接続するため、[MQTT 接続 ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www.ibm.com/support/knowledgecenter/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/connectingtojvm.html){: new_window} を使用し、ホストを `127.0.0.1` として、ポートを `1883` として指定します。
+次に、ヘルス・センター・クライアントと接続するため、[MQTT connection ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.ibm.com/support/knowledgecenter/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/connectingtojvm.html){: new_window} を使用し、ホストを `127.0.0.1`、ポートを `1883` に指定します。
 
 #### shell
 {: #shell}
@@ -108,14 +108,14 @@ $ cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
 
 *jmx*: ユーティリティーは、JMX REST Connector を使用可能にして、リモート JMX クライアントが {{site.data.keyword.Bluemix_notm}} ユーザー資格情報を使用してアプリケーションを管理できるようにします。
 
-JMX コネクターの構成について詳しくは、[Configuring secure JMX connection to the Liberty profile ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_admin_restconnector.html){:new_window} を参照してください。
+JMX コネクターの構成について詳しくは、[Configuring secure JMX connection to the Liberty profile ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_admin_restconnector.html){:new_window} を参照してください。
 
 *jmx* ユーティリティーは proxy を開始しません。
 
 #### localjmx
 {: #localjmx}
 
-*localjmx* ユーティリティーは、[localConnector-1.0 ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window} Liberty フィーチャーを有効にします。これをローカル・ポート転送と組み合わせることで、リモート JMX クライアントによるアプリケーションの管理を許可する代替方法が使用可能になります。
+*localjmx* ユーティリティーは、[localConnector-1.0 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window} Liberty フィーチャーを有効にします。これをローカル・ポート転送と組み合わせることで、リモート JMX クライアントによるアプリケーションの管理を許可する代替方法が使用可能になります。
 
 *localjmx* ユーティリティーは、Diego セルで実行中のアプリケーションにのみ適用できます。*localjmx* を使用するには、まず最初に `cf ssh` コマンドを使用してポート転送を設定します。例えば次のようにします。
 
@@ -132,9 +132,9 @@ $ cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
 #### inspector
 {: #inspector}
 
-6.3.0 より前の Node.js バージョンの場合、*inspector* は、ノード・インスペクター・デバッガー・インターフェースを使用可能にします。*インスペクター*・プロセスは、アプリケーション・コンテナーで実行されます。このユーティリティーを使用することで、CPU 使用プロファイルの作成、ブレークポイントの追加、コードのデバッグを行うことができます。それも、{{site.data.keyword.Bluemix_notm}} でのアプリケーションの実行中に行うことができます。ノード・インスペクター・モジュールについて詳しくは、[GitHub の node-inspector ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://github.com/node-inspector/node-inspector){:new_window} を参照してください。
+6.3.0 より前の Node.js バージョンの場合、*inspector* は、ノード・インスペクター・デバッガー・インターフェースを使用可能にします。*インスペクター*・プロセスは、アプリケーション・コンテナーで実行されます。このユーティリティーを使用することで、CPU 使用プロファイルの作成、ブレークポイントの追加、コードのデバッグを行うことができます。それも、{{site.data.keyword.Bluemix_notm}} でのアプリケーションの実行中に行うことができます。ノード・インスペクター・モジュールについて詳しくは、[node-inspector on GitHub ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/node-inspector/node-inspector){:new_window} を参照してください。
 
-6.3.0 以上の Node.js バージョンの場合、*inspector* は、[V8 Inspector Integration for Node.js ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window} を使用します。
+Node.js バージョン 6.3.0 以上の場合、*inspector* は、[V8 Inspector Integration for Node.js ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window} を使用します。
 
 inspector ユーティリティーは、デフォルトで *proxy* を開始しますが、どのようにリモートでデバッグを行うのかは、Node.js バージョンと、*proxy* または *noproxy* の使用に依存します。次の表に、さまざまなシナリオでのリモート・デバッグへのアクセス方法を示します。
 
@@ -160,10 +160,8 @@ $ cf set-env <appName> BLUEMIX_APP_MGMT_INSPECTOR='{port: 9790}'
 バージョン 6.3.0 以上の Node.js の場合、Chrome DevTools をアプリに接続するために使用できる URL が含まれているログ・メッセージが見つかります。ログ・メッセージは、以下のようなものになります。
 
 ```
-  2016-11-30T16:40:56.03-0500 [APP/0]      OUT Starting app with 'node --inspect=9229  app.js '
-  2016-11-30T16:40:56.17-0500 [APP/0]      ERR Debugger listening on port 9229.
-  2016-11-30T16:40:56.17-0500 [APP/0]      ERR To start debugging, open the following URL in Chrome:
-  2016-11-30T16:40:56.17-0500 [APP/0]      ERR     chrome-devtools://devtools/remote/serve_file...
+  2016-11-30T16:40:56.03-0500 [APP/0]      OUT You will need a SSH tunnel for port 9229 to be able to use the Chrome DevTools to remotely debug your app
+  2016-11-30T16:40:56.17-0500 [APP/0]      ERR Starting app with 'node --inspect=9229  app.js '
 ```
 
 ローカル・ポート転送を介して URL へのアクセスを有効にします。例えば次のようにします。
@@ -172,7 +170,9 @@ $ cf set-env <appName> BLUEMIX_APP_MGMT_INSPECTOR='{port: 9790}'
 $ cf ssh -N -T -L 9229:127.0.0.1:9229 <appName>
 ```
 
-この URL を表示するには、最新版の Chrome Web ブラウザーが必要です。このシナリオでは、proxy は inspector にトラフィックをルーティングしません。
+最新版の Chrome Web ブラウザーを使用して **chrome://inspect** を表示します。その URL から、アプリが、アプリケーション・ファイルのリンク (例えば、**file:///home/vcap/app/app.js**) と共にリストされているのが分かります。  
+
+注: このシナリオでは、プロキシーはトラフィックをインスペクターに経路指定しません。
 
 #### trace
 {: #trace}

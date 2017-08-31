@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-07-26"
 
 ---
 
@@ -55,9 +55,9 @@ lastupdated: "2017-01-11"
 #### hc
 {: #hc}
 
-(*hc*) Health Center 代理程序支持通过 Health Center 客户机来监视应用程序。
+(*hc*) Health Center 代理程序支持通过 Health Center 客户机来监视应用程序。*hc* 代理程序只可用于 IBM SDK for Node.js 运行时版本。要获取最新的运行时集，请参阅 [sdk-for-nodejs buildpack 的最新更新](/docs/runtimes/nodejs/updates.html)。
 
-Health Center 支持使用 IBM Monitoring and Diagnostic Tools 分析 Liberty 和 Node.js 应用程序的性能。有关更多信息，请参阅 [How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}} ![外部链接图标](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){: new_window}。</p></li>
+Health Center 支持使用 IBM Monitoring and Diagnostic Tools 分析 Liberty 和 Node.js 应用程序的性能。有关更多信息，请参阅 [How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){:new_window}。
 
 *hc* 实用程序还会启动 *proxy*。
 
@@ -67,7 +67,7 @@ Health Center 支持使用 IBM Monitoring and Diagnostic Tools 分析 Liberty �
 $ cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
 ```
 
-接着，要与 Health Center 客户机连接，请使用 [MQTT 连接 ![外部链接图标](../icons/launch-glyph.svg)](http://www.ibm.com/support/knowledgecenter/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/connectingtojvm.html){: new_window}，并将主机指定为 `127.0.0.1`，将端口指定为 `1883`。
+接着，要与 Health Center 客户机连接，请使用 [MQTT 连接 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://www.ibm.com/support/knowledgecenter/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/connectingtojvm.html){: new_window}，并将主机指定为 `127.0.0.1`，将端口指定为 `1883`。
 
 #### shell
 {: #shell}
@@ -107,14 +107,14 @@ $ cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
 
 *jmx* 实用程序启用 JMX REST Connector 以允许远程 JMX 客户机使用 {{site.data.keyword.Bluemix_notm}} 用户凭证来管理应用程序。
 
-有关配置 JMX Connector 的更多信息，请参阅 [Configuring secure JMX connection to Liberty profile ![外部链接图标](../icons/launch-glyph.svg)](https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_admin_restconnector.html){:new_window}。
+有关配置 JMX Connector 的更多信息，请参阅 [Configuring secure JMX connection to the Liberty profile ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_admin_restconnector.html){:new_window}。
 
 *jmx* 实用程序不会启动 proxy。
 
 #### localjmx
 {: #localjmx}
 
-*localjmx* 实用程序将启用 [localConnector-1.0 ![外部链接图标](../icons/launch-glyph.svg)](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window} Liberty 功能。此功能与本地端口转发组合使用可支持另一种方法来允许远程 JMX 客户机管理应用程序。
+*localjmx* 实用程序将启用 [localConnector-1.0 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window} Liberty 功能。此功能与本地端口转发组合使用可支持另一种方法来允许远程 JMX 客户机管理应用程序。
 
 *localjmx* 实用程序仅适用于在 Diego 单元中运行的应用程序。要使用 *localjmx*，请首先使用 `cf ssh` 命令建立端口转发。例如：
 
@@ -131,18 +131,16 @@ $ cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
 #### inspector
 {: #inspector}
 
-对于 6.3.0 之前的 Node.js 版本，*inspector* 会启用 Node Inspector 调试器接口。*inspector* 进程在应用程序容器中运行。使用此实用程序可创建 CPU 使用情况概要文件，添加断点和调试代码，所有这些操作都可在应用程序在 {{site.data.keyword.Bluemix_notm}} 上运行的同时执行。有关 Node Inspector 模块的更多信息，请参阅 [node-inspector on GitHub ![外部链接图标](../icons/launch-glyph.svg)](https://github.com/node-inspector/node-inspector){:new_window}。
+对于 6.3.0 之前的 Node.js 版本，*inspector* 会启用 Node Inspector 调试器接口。*inspector* 进程在应用程序容器中运行。使用此实用程序可创建 CPU 使用情况概要文件，添加断点和调试代码，所有这些操作都可在应用程序在 {{site.data.keyword.Bluemix_notm}} 上运行的同时执行。有关 Node Inspector 模块的更多信息，请参阅 [node-inspector on GitHub ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://github.com/node-inspector/node-inspector){:new_window}。
 
-对于 Node.js V6.3.0 和更高版本，*inspector* 会利用 [V8 Inspector Integration for Node.js ![外部链接图标](../icons/launch-glyph.svg)](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}。
+对于 Node.js V6.3.0 和更高版本，*inspector* 会利用 [V8 Inspector Integration for Node.js ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}。
 
 缺省情况下，inspector 实用程序会启动 *proxy*，但远程调试方式取决于 Node.js 版本以及使用的是 *proxy* 还是 *noproxy*。下表显示了如何在各种场景中访问远程调试。
 
 | | proxy| noproxy|
 |---|---|---|
 | < &nbsp; 6.3.0| devconsole 实用程序*：*<br/> https://myApp.mybluemix.net/bluemix-debug/inspector| http://127.0.0.1:8790
-| >= 6.3.0| chrome-devtools URL
-
-| chrome-devtools URL
+| >= 6.3.0| chrome-devtools URL | chrome-devtools URL
 
 对于 *noproxy* 以及 6.3.0 之前的 Node.js 版本，通过本地端口转发启用对 URL 的访问。例如：
 
@@ -159,10 +157,8 @@ $ cf set-env <appName> BLUEMIX_APP_MGMT_INSPECTOR='{port: 9790}'
 对于 Node.js V6.3.0 或更高版本，您将找到一条日志消息，其中包含可用于将 Chrome DevTools 附加到应用程序的 URL。日志消息类似以下内容：
 
 ```
-  2016-11-30T16:40:56.03-0500 [APP/0]      OUT Starting app with 'node --inspect=9229  app.js '
-  2016-11-30T16:40:56.17-0500 [APP/0]      ERR Debugger listening on port 9229.
-  2016-11-30T16:40:56.17-0500 [APP/0]      ERR To start debugging, open the following URL in Chrome:
-  2016-11-30T16:40:56.17-0500 [APP/0]      ERR     chrome-devtools://devtools/remote/serve_file...
+  2016-11-30T16:40:56.03-0500 [APP/0]      OUT You will need a SSH tunnel for port 9229 to be able to use the Chrome DevTools to remotely debug your app
+  2016-11-30T16:40:56.17-0500 [APP/0]      ERR Starting app with 'node --inspect=9229  app.js '
 ```
 
 通过本地端口转发启用对 URL 的访问。例如：
@@ -171,7 +167,9 @@ $ cf set-env <appName> BLUEMIX_APP_MGMT_INSPECTOR='{port: 9790}'
 $ cf ssh -N -T -L 9229:127.0.0.1:9229 <appName>
 ```
 
-您将需要最新版本的 Chrome Web 浏览器才可浏览到此 URL。在此场景中，proxy 不会将流量路由到 inspector。
+使用最新版本的 Chrome Web 浏览器来浏览到 **chrome://inspect**。在该 URL 中，将看到列出了您的应用程序以及应用程序文件链接（例如，**file:///home/vcap/app/app.js**）。  
+
+注：在此场景中，proxy 不会将流量路由到 inspector。
 
 #### trace
 {: #trace}

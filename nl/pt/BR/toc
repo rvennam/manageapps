@@ -11,7 +11,6 @@ Gerenciando apps
 	{: .navgroup id="howto"}
 	[Incluindo um serviço em seu app](../services/reqnsi.html#add_service)
 	depapps.md
-	[Criando uma implementação para o botão Bluemix](../develop/deploy_button.html)
 	updapps.md
 	secapps.md
 	{: .navgroup-end}

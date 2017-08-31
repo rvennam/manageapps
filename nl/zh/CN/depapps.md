@@ -32,9 +32,9 @@ Cloud Foundry 支持 Diego，这是全新的缺省运行时体系结构，它提
 ### 应用程序编译打包
 {: #diego}
 
-在编译打包阶段，Diego 将处理与应用程序容器编排相关的所有方面。推送应用程序时，云控制器将向 Diego 发送编译打包请求，随后 Diego 将接管分配应用程序实例的任务。Diego 后端会以确保容错和长期一致性的方式对应用程序容器进行编排，并在一系列虚拟机（称为“单元”）之间均衡负载。此外，Diego 会确保用户可以访问其应用程序的日志。所有 Diego 组件都设计为进行集群，这意味着您可以创建不同的可用性区域。
+在编译打包阶段，Diego 将处理与应用程序容器编排相关的所有事项。推送应用程序时，云控制器将向 Diego 发送编译打包请求，随后 Diego 将接管分配应用程序实例的任务。Diego 后端会以确保容错和长期一致性的方式对应用程序容器进行编排，以便在一系列虚拟机（称为“单元”）之间均衡负载。此外，Diego 会确保用户可以访问其应用程序的日志。所有 Diego 组件都设计为进行集群，这意味着您可以创建不同的可用性区域。
 
-为了验证应用程序的运行状况，Diego 支持用于 DEA 的基于端口的相同检查。但是，Diego 还设计为能够具备更通用的选项，如基于 URL 的运行状况检查，未来可能会启用这些选项。
+为了验证应用程序的运行状况，Diego 支持曾用于 DEA 的基于端口的检查。然而，Diego 还设计为能够具备更通用的选项（如基于 URL 的运行状况检查），未来可能会启用这些选项。
 
 #### 新应用程序编译打包
 {: #stageapp}
@@ -51,7 +51,7 @@ Cloud Foundry 支持 Diego，这是全新的缺省运行时体系结构，它提
 ### 将现有应用程序迁移到 Diego
 {: #migrateapp}
 
-Diego 是 {{site.data.keyword.Bluemix_notm}} 的缺省 Cloud Foundry 体系结构，将除去对 DEA 的支持，所以您必须通过更新每个现有应用程序来迁移所有这些应用程序。通过使用 Diego 标志更新应用程序，开始将应用程序迁移到 Diego。应用程序将立即尝试开始在 Diego 上运行，并最终停止在 DEA 上运行。
+Diego 是 {{site.data.keyword.Bluemix_notm}} 的缺省 Cloud Foundry 体系结构，将除去其对 DEA 的支持，所以您必须通过更新每个现有应用程序来迁移所有这些应用程序。通过使用 Diego 标志更新应用程序，开始将应用程序迁移到 Diego。应用程序将立即尝试开始在 Diego 上运行，并停止在 DEA 上运行。
 
 在应用程序从 DEA 体系结构更新到 Diego 的过程中，您可能会遇到较短时间的停机，或者如果应用程序与 Diego 不兼容，那么可能会遇到较长时间的停机。为了缩短停机时间，请通过将应用程序的副本部署到 Diego，然后交换路径并向下扩展 DEA 应用程序，从而执行[蓝绿部署](/docs/manageapps/updapps.html#blue_green)。
 
@@ -66,7 +66,7 @@ Diego 是 {{site.data.keyword.Bluemix_notm}} 的缺省 Cloud Foundry 体系结�
 
 更新应用程序后，验证应用程序是否已启动。如果迁移的应用程序无法启动，那么该应用程序会保持脱机状态，直到您确定并解决了问题，然后重新启动应用程序为止。
 
-在将除去 DEA 体系结构支持时，IBM 将向您提醒即将到来的必需迁移时间段；如果您一直未迁移应用程序，操作团队将为您迁移所有应用程序。
+在将除去 DEA 体系结构支持时，IBM 将提醒您即将到来的强制迁移时间段；如果您一直未迁移应用程序，操作团队将为您迁移所有应用程序。
 
 要验证应用程序正在哪个后端上运行，请使用以下命令：
 
@@ -81,13 +81,13 @@ Diego 是 {{site.data.keyword.Bluemix_notm}} 的缺省 Cloud Foundry 体系结�
 
   * 使用 `--no-route` 选项部署的工作程序应用程序未报告为“正常运行”。为了避免此问题，请使用 `cf set-health-check APP_NAME none` 命令禁用基于端口的运行状况检查。
   * 不再支持 **cf files** 命令。替代命令为 **cf ssh**。有关 **cf ssh** 命令的更多详细信息，请参阅 [cf ssh](/docs/cli/reference/cfcommands/index.html#cf_ssh)。
-  * 有些应用程序可能会使用大量文件描述符 (inode)。如果遇到此问题，必须使用 `cf scale APP_NAME [-k DISK]` 命令增大用于应用程序的磁盘限额。
+  * 有些应用程序可能会使用大量文件描述符（索引节点）。如果遇到此问题，必须使用 `cf scale APP_NAME [-k DISK]` 命令增大用于应用程序的磁盘配额。
 
 有关已知问题的完整列表，请参阅 Cloud Foundry 文档页面中的 [Migrating to Diego ![外部链接图标](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/diego-design-notes/blob/master/migrating-to-diego.md){: new_window}。
 
 在除去对旧 DEA 体系结构的支持之前，可以运行以下命令转换回 DEA：`cf disable-diego APPLICATION_NAME`。此外，在除去该支持之前，您仍然可以将新应用程序部署到 DEA 体系结构：
 
-**注**：您必须安装 [cf CLI ![外部链接图标](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} 和 [Diego-Enabler CLI 插件 ![外部链接图标](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window} 才可使用 `disable-diego` 命令。
+**注**：您必须安装 [cf CLI ![外部链接图标](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window} 和 [Diego-Enabler CLI 插件 ![外部链接图标](../icons/launch-glyph.svg)](https://github.com/cloudfoundry-incubator/Diego-Enabler){:new_window}，才能使用 `disable-diego` 命令。
 
 1. 在不启动应用程序的情况下，对应用程序进行部署：
 ```
@@ -109,9 +109,9 @@ Diego 是 {{site.data.keyword.Bluemix_notm}} 的缺省 Cloud Foundry 体系结�
 
 **注**：如果您仍有应用程序在 DEA 上运行，那么在除去对 DEA 的支持之前，您仍可以使用 **cf files** 命令来查看应用程序容器中的文件。
 
-如果应用程序无法启动，那么该应用程序会停止，并会除去应用程序容器的整个内容。因此，如果应用程序停止，或者如果应用程序的编译打包过程失败，那么不会有日志文件可供您使用。
+如果应用程序无法启动，那么该应用程序会停止，并会除去应用程序容器的整个内容。因此，如果应用程序停止或应用程序的编译打包过程失败，将不会有可供您使用的日志文件。
 
-如果应用程序的日志不再可用，并因此导致 **cf ssh**、**cf scp** 或 **cf files** 命令无法再用于查看应用程序容器内编译打包错误的原因，那么可以改用 **cf logs** 命令。**cf logs** 使用 Cloud Foundry 日志聚集器来收集应用程序日志和系统日志的详细信息，并且可以查看在日志聚集器中缓冲的内容。有关日志聚集器的更多信息，请参阅 [Logging in Cloud Foundry ![外部链接图标](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}。
+如果应用程序的日志不再可用，并因此导致 **cf ssh**、**cf scp** 或 **cf files** 命令无法再用于查看应用程序容器内编译打包错误的原因，那么可以改用 **cf logs** 命令。**cf logs** 命令使用 Cloud Foundry 日志聚集器来收集应用程序日志和系统日志的详细信息，并且可以查看在日志聚集器中缓冲的内容。有关日志聚集器的更多信息，请参阅 [Logging in Cloud Foundry ![外部链接图标](../icons/launch-glyph.svg)](http://docs.cloudfoundry.org/devguide/deploy-apps/streaming-logs.html){:new_window}。
 
 **注：**缓冲区大小是有限制的。如果应用程序运行了很长时间仍未重新启动，那么输入 `cf logs appname --recent` 命令后可能不会显示日志，原因是日志缓冲区可能已清除。因此，要调试大型应用程序的编译打包错误，可以在部署应用程序时，在 cf 命令行界面的单独命令行中输入 `cf logs appname` 命令来跟踪日志。
 
@@ -333,7 +333,7 @@ cf push -f appManifest.yml
   <dt><strong>PWD</strong></dt>
   <dd>运行 buildpack 的当前工作目录。</dd>
   <dt><strong>TMPDIR</strong></dt>
-  <dd>存储临时和编译打包文件的目录。</dd>
+  <dd>存储临时文件和编译打包文件的目录。</dd>
   <dt><strong>USER</strong></dt>
   <dd>运行 Diego 的用户标识。</dd>
   <dt><strong>VCAP_APP_HOST</strong></dt>
@@ -343,10 +343,10 @@ cf push -f appManifest.yml
 <pre class="pre codeblock"><code>
   {
 "limits": {
-"mem": 512,
+        "mem": 512,
         "disk": 1024,
         "fds": 16384
-        },
+    },
     "application_version": "df111903-7d95-4c20-96d9-aad4e97d2a9a",
     "application_name": "testapp",
     "application_uris": [
@@ -375,19 +375,19 @@ cf push -f appManifest.yml
   <dd>JSON 字符串，包含与已部署应用程序绑定的服务的信息。例如：
 <pre class="pre codeblock"><code>
   {
-"mysql-5.5": [
+    "mysql-5.5": [
         {
-                        "name": "mysql-ix",
+            "name": "mysql-ix",
             "label": "mysql-5.5",
       "tags":[
-"mysql",
+                "mysql",
                 "relational",
                 "data_management",
                 "ibm_experimental"
-                        ],
+            ],
             "plan": "300",
 "credentials": {
-"name": "d296abcc06c9e418b94abcaafdf547620",
+                "name": "d296abcc06c9e418b94abcaafdf547620",
                 "hostname": "23.246.200.38",
                 "host": "23.246.200.38",
                 "port": 3307,
@@ -396,7 +396,7 @@ cf push -f appManifest.yml
                 "password": "peRiYCG4ZYqu3",
                 "uri": "mysql://uzpGf7eGJ7mtB:peRiYCG4ZYqu3@23.246.200.38:3307/d296abcc06c9e418b94abcaafdf547620"
             }
-                }
+        }
     ]
 }
 </code></pre></dd>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-11"
+lastupdated: "2017-07-26"
 
 ---
 
@@ -55,9 +55,9 @@ L'utilitaire *devconsole* démarre également *proxy*.
 #### hc
 {: #hc}
 
-L'agent Health Center (*hc*) permet à votre application d'être surveillée par le client Health Center.
+L'agent Health Center (*hc*) permet à votre application d'être surveillée par le client Health Center.  L'agent *hc* n'est disponible qu'avec les versions d'exécution IBM SDK for Node.js.  Voir [Dernières mises à jour du pack de construction sdk-for-nodejs](/docs/runtimes/nodejs/updates.html) pour le jeu d'environnements d'exécution actuels.
 
-Health Center prend en charge l'analyse des performances de vos applications Liberty et Node.js à l'aide d'IBM Monitoring and Diagnostic Tools. Pour plus d'informations, voir [How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}} ![icône de lien externe](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){: new_window}.</p></li>
+Health Center prend en charge l'analyse des performances de vos applications Liberty et Node.js à l'aide d'IBM Monitoring and Diagnostic Tools. Pour plus d'informations, voir [How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}} ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){:new_window}.
 
 L'utilitaire *hc* démarre également *proxy*.
 
@@ -67,7 +67,7 @@ L'utilitaire *hc* peut être utilisé conjointement avec *noproxy*. Pour utilise
 $ cf ssh -N -T -L 1883:127.0.0.1:1883 <nomApp>
 ```
 
-Ensuite, pour vous connecter avec le client Health Center, utilisez la [connexion MQTT ![icône de lien externe](../icons/launch-glyph.svg)](http://www.ibm.com/support/knowledgecenter/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/connectingtojvm.html){: new_window} et indiquez l'hôte `127.0.0.1` et le port `1883`.
+Ensuite, pour vous connecter au client Health Center, utilisez une [connexion MQTT![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/knowledgecenter/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/connectingtojvm.html){: new_window} et spécifiez comme hôte `127.0.0.1` et pour le port, `1883`.
 
 #### shell
 {: #shell}
@@ -107,14 +107,14 @@ Ensuite, pour vous connecter à Eclipse, utilisez "Remote Java Configuration" et
 
 L'utilitaire *jmx* permet au connecteur JMX REST d'autoriser un client JMX distant à gérer l'application avec les données d'identification {{site.data.keyword.Bluemix_notm}}.
 
-Pour plus d'informations sur la configuration d'un connecteur JMX, voir [Configuring secure JMX connection to the Liberty profile ![icône de lien externe](../icons/launch-glyph.svg)](https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_admin_restconnector.html){:new_window}.
+Pour plus d'informations sur la configuration d'un connecteur JMX, voir [Configuring secure JMX connection to the Liberty profile ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_admin_restconnector.html){:new_window}.
 
 L'utilitaire *jmx* ne démarre pas proxy.
 
 #### localjmx
 {: #localjmx}
 
-L'utilitaire *localjmx* active la fonction Liberty [localConnector-1.0 ![icône de lien externe](../icons/launch-glyph.svg)](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window}. Combinée avec l'acheminement de port local, elle offre un autre moyen d'autoriser un client JMX distant à gérer l'application.
+L'utilitaire *localjmx* active la fonction Liberty [localConnector-1.0 ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window}. Combinée avec l'acheminement de port local, elle offre un autre moyen d'autoriser un client JMX distant à gérer l'application.
 
 L'utilitaire *localjmx* est applicable uniquement pour les applications qui s'exécutent dans une cellule Diego. Pour utiliser *localjmx*, établissez d'abord l'acheminement de port à l'aide de la commande `cf ssh`. Exemple :
 
@@ -131,9 +131,9 @@ Ensuite, pour vous connecter avec JConsole, choisissez "Remote Process", indique
 #### inspector
 {: #inspector}
 
-Pour les versions de Node.js antérieures à la version 6.3.0, *inspector* active l'interface du débogueur node inspector. Le processus *inspector* s'exécute dans votre conteneur d'applications. Servez-vous de cet utilitaire pour créer des profils d'utilisation de l'unité centrale, ajouter des points d'arrêt et déboguer le code alors que votre application s'exécute dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations sur le module node inspector, voir [node-inspector on GitHub ![icône de lien externe](../icons/launch-glyph.svg)](https://github.com/node-inspector/node-inspector){:new_window}.
+Pour les versions de Node.js antérieures à la version 6.3.0, *inspector* active l'interface du débogueur node inspector. Le processus *inspector* s'exécute dans votre conteneur d'applications. Servez-vous de cet utilitaire pour créer des profils d'utilisation de l'unité centrale, ajouter des points d'arrêt et déboguer le code alors que votre application s'exécute dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations sur le module Node Inspector, voir [node-inspector on GitHub ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/node-inspector/node-inspector){:new_window}.
 
-Pour Node.js versions 6.3.0 et ultérieures, *inspector* utilise [V8 Inspector Integration for Node.js ![icône de lien externe](../icons/launch-glyph.svg)](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}.
+Pour les versions Node.js 6.3.0 et ultérieures, *inspector* utilise la fonction [V8 Inspector Integration for Node.js ![External link icon](../icons/launch-glyph.svg "External link icon")](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}.
 
 L'utilitaire inspector démarre *proxy* par défaut, mais le mode de débogage à distance dépend de la version de Node.js et de l'utilisation de *proxy* ou de *noproxy*.  Le tableau suivant indique comment accéder au débogage à distance dans les différents scénarios.
 
@@ -157,10 +157,8 @@ $ cf set-env <nomApp> BLUEMIX_APP_MGMT_INSPECTOR='{port: 9790}'
 Pour Node.js version 6.3.0 ou ultérieure, un message de journal indique une URL qui peut être employée pour associer les outils Chrome DevTools à votre application. Les messages du journal sont similaires à l'exemple suivant :
 
 ```
-  2016-11-30T16:40:56.03-0500 [APP/0]      OUT Starting app with 'node --inspect=9229  app.js '
-  2016-11-30T16:40:56.17-0500 [APP/0]      ERR Debugger listening on port 9229.
-  2016-11-30T16:40:56.17-0500 [APP/0]      ERR To start debugging, open the following URL in Chrome:
-  2016-11-30T16:40:56.17-0500 [APP/0]      ERR     chrome-devtools://devtools/remote/serve_file...
+  2016-11-30T16:40:56.03-0500 [APP/0]      OUT You will need a SSH tunnel for port 9229 to be able to use the Chrome DevTools to remotely debug your app
+  2016-11-30T16:40:56.17-0500 [APP/0]      ERR Starting app with 'node --inspect=9229  app.js '
 ```
 
 Activez l'accès à l'URL via l'acheminement de port local. Exemple :
@@ -169,7 +167,9 @@ Activez l'accès à l'URL via l'acheminement de port local. Exemple :
 $ cf ssh -N -T -L 9229:127.0.0.1:9229 <nomApp>
 ```
 
-Vous aurez besoin d'une version à jour du navigateur Web Chrome pour accéder à cette URL. Dans ce scénario, le proxy n'achemine pas le trafic à l'inspecteur.
+Utilisez une version à jour du navigateur Chrome pour accéder à l'élément **chrome://inspect**. Depuis cette URL, vous pourrez voir votre application répertoriée, de pair avec un lien vers vos fichiers d'application, tel que **file:///home/vcap/app/app.js**.  
+
+Remarque : le proxy n'achemine pas le trafic à l'inspecteur dans ce scénario.
 
 #### trace
 {: #trace}

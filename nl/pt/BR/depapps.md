@@ -270,7 +270,7 @@ cf push -f appManifest.yml
 <p>  </p>
 
 
-|Opções	|Descrição |Uso ou exemplo|
+|Opções	|Descrição	|Uso ou exemplo|
 |:----------|:--------------|:---------------|
 |**buildpack**	|A URL ou o nome do buildpack customizado.	|`buildpack: ` *buildpack_URL*|
 |**disk_quota**	|A cota do disco que é alocada para um aplicativo. O valor padrão é 1 G.	|`disk_quota: 500M`|

@@ -9,9 +9,8 @@ Apps verwalten
 	{: .navgroup-end}
 	
 	{: .navgroup id="howto"}
-	[Service zur Anwendung hinzufügen](../services/reqnsi.html#add_service)
+	[Service zur App hinzufügen](../services/reqnsi.html#add_service)
 	depapps.md
-	[Schaltfläche für die Bereitstellung in Bluemix erstellen](../develop/deploy_button.html)
 	updapps.md
 	secapps.md
 	{: .navgroup-end}

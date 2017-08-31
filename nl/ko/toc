@@ -11,7 +11,6 @@
 	{: .navgroup id="howto"}
 	[앱에 서비스 추가](../services/reqnsi.html#add_service)
 	depapps.md
-	[Bluemix에 배치 단추 작성](../develop/deploy_button.html)
 	updapps.md
 	secapps.md
 	{: .navgroup-end}
