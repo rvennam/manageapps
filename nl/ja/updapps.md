@@ -16,7 +16,7 @@ lastupdated: "2017-04-25"
 {: #updatingapps}
 
 
-cf push コマンドまたは {{site.data.keyword.Bluemix}} DevOps Services を使用して、{{site.data.keyword.Bluemix_notm}} 内のアプリケーションを更新することができます。多くの場合、Node.js などの組み込みビルドパックにおいても、-c パラメーターを使用して、アプリケーションの開始にどのコマンドを使用するかを指定する必要があります。
+cf push コマンドまたは {{site.data.keyword.Bluemix}} Continuous Delivery を使用して、{{site.data.keyword.Bluemix_notm}} 内のアプリケーションを更新できます。多くの場合、Node.js などの組み込みビルドパックにおいても、-c パラメーターを使用して、アプリケーションの開始にどのコマンドを使用するかを指定する必要があります。
 {:shortdesc}
 
 ## カスタム・ドメインの作成と使用
@@ -297,4 +297,4 @@ cf delete Blue -f
 {: #general}
 
 * [Blue-Green デプロイメント ![「外部リンク」アイコン](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
-* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}
+

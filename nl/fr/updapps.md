@@ -16,7 +16,7 @@ lastupdated: "2017-04-25"
 {: #updatingapps}
 
 
-Vous pouvez utiliser la commande cf push ou {{site.data.keyword.Bluemix}} DevOps Services pour mettre à jour les applications dans {{site.data.keyword.Bluemix_notm}}. Dans de nombreux cas, même pour les packs de construction intégrés tels que Node.js, vous devez également fournir un paramètre -c afin de spécifier la
+Vous pouvez utiliser la commande cf push ou {{site.data.keyword.Bluemix}} Continuous Delivery pour mettre à jour les applications dans {{site.data.keyword.Bluemix_notm}}. Dans de nombreux cas, même pour les packs de construction intégrés tels que Node.js, vous devez également fournir un paramètre -c afin de spécifier la
 commande à utiliser pour démarrer votre application.
 {:shortdesc}
 
@@ -324,4 +324,4 @@ delete`.
 {: #general}
 
 * [Blue-green deployments ![icône de lien externe](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
-* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![icône de lien externe](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}
+

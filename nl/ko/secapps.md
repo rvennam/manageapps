@@ -30,7 +30,7 @@ CSR이 유효하려면 CSR 생성 시 다음 정보를 입력해야 합니다.
 
 **국가 이름**
 
-  국가 또는 지역을 나타내는 두 자릿수 코드입니다. 예를 들어 "US"는 미국을 나타냅니다. 기타 국가 또는 지역의 경우 CSR을 작성하기 전에 [ISO 국가 코드 목록 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://www.iso.org/obp/ui/#search){:new_window}을 확인하십시오. 
+  국가 또는 지역을 나타내는 두 자릿수 코드입니다. 예를 들어, "US"는 미국을 나타냅니다. 기타 국가 또는 지역의 경우 CSR을 작성하기 전에 [ISO 국가 코드 목록 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://www.iso.org/obp/ui/#search){:new_window}을 확인하십시오. 
 
 **시/도**
 

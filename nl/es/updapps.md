@@ -16,7 +16,7 @@ lastupdated: "2017-04-25"
 {: #updatingapps}
 
 
-Puede utilizar el mandato cf push o {{site.data.keyword.Bluemix}} DevOps Services para actualizar las apps en {{site.data.keyword.Bluemix_notm}}. En muchos casos, incluso para los paquetes de compilación integrados como Node.js, también debe escribir un parámetro -c para especificar el mandato que se sebe utilizar para iniciar la aplicación.
+Puede utilizar el mandato cf push o {{site.data.keyword.Bluemix}} Continuous Delivery para actualizar las apps en {{site.data.keyword.Bluemix_notm}}. En muchos casos, incluso para los paquetes de compilación integrados como Node.js, también debe escribir un parámetro -c para especificar el mandato que se sebe utilizar para iniciar la aplicación.
 {:shortdesc}
 
 ## Creación y utilización de un dominio personalizado
@@ -307,4 +307,4 @@ delete`.
 {: #general}
 
 * [Despliegues azul-verde ![icono de enlace externo](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
-* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![icono de enlace externo](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}
+

@@ -16,7 +16,7 @@ lastupdated: "2017-04-25"
 {: #updatingapps}
 
 
-É possível usar o comando cf push ou o {{site.data.keyword.Bluemix}} DevOps Services para atualizar os aplicativos no {{site.data.keyword.Bluemix_notm}}. Em muitos casos, mesmo para os buildpacks integrados, como o Node.js, deve-se também fornecer um parâmetro -c para especificar qual comando será usado para iniciar seu aplicativo.
+É possível usar o comando cf push ou o {{site.data.keyword.Bluemix}} Continuous Delivery para atualizar os aplicativos em {{site.data.keyword.Bluemix_notm}}. Em muitos casos, mesmo para os buildpacks integrados, como o Node.js, deve-se também fornecer um parâmetro -c para especificar qual comando será usado para iniciar seu aplicativo.
 {:shortdesc}
 
 ## Criando e usando um domínio customizado
@@ -329,4 +329,4 @@ estiver em vigor.
 {: #general}
 
 * [Blue-green deployments ![Ícone de link externo](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
-* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![Ícone de link externo](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}
+

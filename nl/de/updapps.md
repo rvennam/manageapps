@@ -16,7 +16,7 @@ lastupdated: "2017-04-25"
 {: #updatingapps}
 
 
-Sie können den Befehl 'cf push' oder {{site.data.keyword.Bluemix}} DevOps Services verwenden, um die Anwendungen in {{site.data.keyword.Bluemix_notm}} zu aktualisieren. In vielen Fällen müssen Sie (selbst für die integrierten Buildpacks wie beispielsweise 'Node.js') auch den Parameter '-c' verwenden, um anzugeben, welcher Befehl zum Starten Ihrer Anwendung verwendet wird.
+Sie können den Befehl 'cf push' oder {{site.data.keyword.Bluemix}} Continuous Delivery verwenden, um die Anwendungen in {{site.data.keyword.Bluemix_notm}} zu aktualisieren. In vielen Fällen müssen Sie (selbst für die integrierten Buildpacks wie beispielsweise 'Node.js') auch den Parameter '-c' verwenden, um anzugeben, welcher Befehl zum Starten Ihrer Anwendung verwendet wird.
 {:shortdesc}
 
 ## Angepasste Domäne erstellen und verwenden
@@ -301,4 +301,4 @@ In diesem Beispiel ist *Blue* die zuvor bereitgestellte Anwendung, und *Green* i
 {: #general}
 
 * [Blue-Green-Bereitstellungen ![Symbol für externen Link](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
-* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![Symbol für externen Link](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}
+

@@ -447,7 +447,7 @@ if (process.env.VCAP_SERVICES) {
 ## 애플리케이션 배치 사용자 정의
 {: #customize_dep}
 
-애플리케이션에 대한 배치 태스크를 사용자 정의할 수 있습니다. 예를 들어 애플리케이션 시작 명령을 지정한 다음 애플리케이션 스타트업 환경을 구성할 수 있습니다.
+애플리케이션에 대한 배치 태스크를 사용자 정의할 수 있습니다. 예를 들어, 애플리케이션 시작 명령을 지정한 다음 애플리케이션 스타트업 환경을 구성할 수 있습니다.
 {:shortdesc}
 
 ### 시작 명령 지정
@@ -462,7 +462,7 @@ if (process.env.VCAP_SERVICES) {
   cf push appname -p app_path -c "node app.js"
   ```
 
-  * `manifest.yml` 파일에 command 매개변수를 사용하십시오. 예를 들어 Node.js 애플리케이션을 배치할 경우 **node app.js** 시작 명령을 Manifest 파일에 지정할 수 있습니다.
+  * `manifest.yml` 파일에 command 매개변수를 사용하십시오. 예를 들어, Node.js 애플리케이션을 배치할 경우 **node app.js** 시작 명령을 Manifest 파일에 지정할 수 있습니다.
 
   ```
   command: node app.js

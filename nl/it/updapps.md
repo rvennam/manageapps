@@ -16,7 +16,7 @@ lastupdated: "2017-04-25"
 {: #updatingapps}
 
 
-Per aggiornare le applicazioni in {{site.data.keyword.Bluemix_notm}}, puoi utilizzare il comando cf push o {{site.data.keyword.Bluemix}} DevOps Services. In molti casi, anche per i pacchetti di build integrati quali Node.js, devi inoltre fornire un parametro -c per specificare il comando utilizzato per avviare la tua applicazione.
+Puoi utilizzare il comando cf push o {{site.data.keyword.Bluemix}} Continuous Delivery per aggiornare le applicazioni in {{site.data.keyword.Bluemix_notm}}. In molti casi, anche per i pacchetti di build integrati quali Node.js, devi inoltre fornire un parametro -c per specificare il comando utilizzato per avviare la tua applicazione.
 {:shortdesc}
 
 ## Creazione e utilizzo di un dominio personalizzato
@@ -326,4 +326,4 @@ essere eliminata quando è in funzione la nuova.
 {: #general}
 
 * [Blue-green deployments ![Icona link esterno](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
-* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![Icona link esterno](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}
+

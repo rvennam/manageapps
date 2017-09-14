@@ -16,7 +16,7 @@ lastupdated: "2017-04-25"
 {: #updatingapps}
 
 
-您可以使用 cf push 指令或 {{site.data.keyword.Bluemix}} DevOps Services，來更新 {{site.data.keyword.Bluemix_notm}} 中的應用程式。在許多情況下，即使是內建建置套件（例如 Node.js），您還是必須提供 -c 參數來指定用來啟動應用程式的指令。
+您可以使用 cf push 指令或 {{site.data.keyword.Bluemix}} Continuous Delivery，來更新 {{site.data.keyword.Bluemix_notm}} 中的應用程式。在許多情況下，即使是內建建置套件（例如 Node.js），您還是必須提供 -c 參數來指定用來啟動應用程式的指令。
 {:shortdesc}
 
 ## 建立及使用自訂網域
@@ -297,4 +297,4 @@ cf delete Blue -f
 {: #general}
 
 * [BlueGreenDeployment ![外部鏈結圖示](../icons/launch-glyph.svg)](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
-* [IBM {{site.data.keyword.Bluemix_notm}} DevOps Services ![外部鏈結圖示](../icons/launch-glyph.svg)](https://hub.jazz.net/){:new_window}
+
