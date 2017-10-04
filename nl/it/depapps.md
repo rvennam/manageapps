@@ -220,7 +220,7 @@ Perché
 utilizza il seguente comando dalla directory che contiene l'origine della tua applicazione:
 
   ```
-  cf push nome_applicazione
+  cf push nomeapplicazione
   ```
 
 ### Distribuzione di un'applicazione in più spazi
@@ -238,7 +238,7 @@ utilizzando il comando **cf target** con l'opzione **-s**:
   2. Passa alla directory della tua applicazione e distribuiscila utilizzando il comando **cf push**, dove nome_applicazione deve essere univoco all'interno del tuo dominio.
 
   ```
-  cf push nome_applicazione
+  cf push nomeapplicazione
   ```
 
 ## Manifest dell'applicazione
